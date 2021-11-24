@@ -3269,6 +3269,14 @@ form.navbar-form.navbar-right {
 .navbar-header {
     background-color: #D95459;
 }
+@media (max-width: 768px){
+div.navbar-header {
+    background-color: wheat;
+}
+
+}
+
+
 h1 a.navbar-brand {
     width: 152px;
 }
