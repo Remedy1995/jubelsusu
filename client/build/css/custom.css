@@ -7,6 +7,24 @@
     
 }
 
+img{
+
+}
+@media(min-width:768px) {
+
+
+    img{
+        border-radius: 100px;
+         position: relative;
+         top: -80px;
+         left: -60px;
+     
+     }
+     
+
+
+}
+
 #wrapper {
     width: 100%;
 }
@@ -667,6 +685,20 @@ div.content-main{
     height: 1000px;
     background: white;
 }
+@media (max-width: 768px){
+
+    div.content-main{
+
+        background: white;
+         position: relative;
+         top: -65em;
+     height: 65em;
+     }
+
+
+}
+
+
 span#checkin.input-group-addon{
     top: 40px;
     height: 10px;
@@ -677,6 +709,16 @@ span#checkin.input-group-addon{
 label#lab.col-md-2.control-label{
 left: -20px;
 bottom: -40px;
+}
+
+@media (max-width: 768px){
+
+    label#lab.col-md-2.control-label {
+        left: 20px;
+        bottom: -30px;
+    }
+    
+
 }
 .progress.thin {
   height: 10px;
@@ -768,6 +810,19 @@ bottom: -40px;
     width: 248px;
   
 }
+
+@media (max-width: 768px){
+
+    div.navbar-default.sidebar {
+        background-color: #9acd32;
+        height: 800px;
+        width: 399px;
+    }
+    
+
+}
+
+
 
 .details{
     position: relative;
@@ -1551,6 +1606,22 @@ i.fa.fa-globe {
 a.hvr-bounce-to-right{
     text-decoration: none;
 }
+
+@media (max-width: 768px){
+
+    a.hvr-bounce-to-right{
+    
+        color: #c76f6f;
+        position: relative;
+        white-space: nowrap;
+        left: -190px;
+    
+    }
+    
+}
+
+
+
 div.cal1.cal_2{
     position: relative;
     top: -300px;
