@@ -2250,9 +2250,8 @@ label.control-label {
     #choose {
         position: relative;
         top: 50px;
-        left: 30px;
         height: 40px;
-        width: 320px;
+        width: 259px
     }
 }
 
