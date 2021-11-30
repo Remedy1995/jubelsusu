@@ -5,6 +5,8 @@ import swal from "sweetalert";
 import axios from "axios";
 import AdminHeader from "./adminheader";
 import Sidebar from "./sidebar";
+import { useMediaQuery } from 'react-responsive'
+
 function CreateAgents(){
 	
 	const [file, setFile] = useState();
@@ -17,6 +19,14 @@ function CreateAgents(){
 	const [date,setDate]=useState("");
 	const [phone,setPhone] =useState("");
 	const [agentname,setAgentname]=useState("");
+	const [show,setShow]=useState(true);
+	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 738px)' })
+
+	
+	function OpenSidebar(){
+		setShow(!show)
+		
+	  }
 	const saveFirstname = (e) => {
 		e.preventDefault();
 		setFirstname(e.target.value);
@@ -128,14 +138,22 @@ const [data,setdata]=useState(null);
 	   
 	 var agentdata=!data?"":data;
 
+
+	 
 return(
 	<div>
 
 
  <AdminHeader/>
-		 <Sidebar/>
+ <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample" style={{background:"black"}} onClick={OpenSidebar} >
+                    <span className="sr-only" style={{color:"yellowgreen"}}>Toggle navigation</span>
+                    <span className="icon-bar" ></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                </button>
+				{show?<Sidebar/>:null}
         
-        <div id="page-wrapper" className="gray-bg dashbard-1">
+				{show && isTabletOrMobile ?"" : <div id="page-wrapper" className="gray-bg dashbard-1">
        <div className="content-main" style={{background:"white"}}>
  
   			
@@ -203,7 +221,7 @@ return(
 									<span className="input-group-addon" id="checkin">
 										<i className="fa fa-envelope-o"></i>
 									</span>
-									<input style={{position:"relative",top:"40px",left:"-30px"}} type="text" className="form-control1" placeholder="User Name" id="username" onChange={saveUsername} name="username"/>
+									<input type="text" className="form-control1" placeholder="User Name" id="username" onChange={saveUsername} name="username"/>
 								</div>
 							</div>
 						</div>
@@ -260,9 +278,10 @@ return(
 						<div className="form-group">
 					
 							<div className="col-md-8">
-								<div className="input-group">							
+								<div className="input-group" id="filesee">							
 							
-									<input type="file" id="file" onChange={saveFile} name="file" className="saveFile"/>
+								{show && isTabletOrMobile?<input type="file" id="file" onChange={saveFile} name="file" className="saveFile"/>
+ :<input type="file" id="file" onChange={saveFile} name="file" className="saveFile"/>}
 								</div>
 							</div>
 						</div>			
@@ -278,7 +297,7 @@ return(
 		</div>
 		<div className="clearfix"> </div>
        </div>
-    
+}
 
 </div>
 );

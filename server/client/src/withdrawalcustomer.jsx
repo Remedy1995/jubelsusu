@@ -96,7 +96,7 @@ return(
 									<span className="input-group-addon" id="checkin">
 										<i className="fa fa-envelope-o"></i>
 									</span>
-									<input type="text" className="accoun" placeholder="Account Number" id="accountnumber" onChange={userHandler}/>
+									<input  type="text" className="accoun" placeholder="Account Number" id="accountnumber" onChange={userHandler}/>
 								</div>
 							
 							</div>

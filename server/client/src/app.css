@@ -10,6 +10,22 @@ h1, h2, h3 {margin: 0;margin-left: 50 px
 ul, ol {margin: 0;padding: 0;}
 p {margin: 0;}
 
+
+
+
+#main {
+    transition: margin-left .5s; /* If you want a transition effect */
+    padding: 20px;
+  }
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
 html, body{
   	font-family:'system-ui';
     font-size: 100%;
@@ -235,6 +251,59 @@ div#wrapper {
     width: 248px;
   
 }
+@media (max-width: 738px){
+    .navbar-default.sidebar {
+        background-color: yellowgreen;
+        height: 460px;
+        width: 247px;
+        float: left;
+        position: relative;
+         top: -111px;
+    }
+    }
+    @media (max-width:736px){
+
+
+button.navbar-toggle{
+    position: absolute;
+    top: 10px;
+    width: 9%;
+    left: 340px;
+}}
+
+
+    @media (max-width:736px){
+   span.name-caret{
+    color: darkorchid;
+    font-size: 11px;
+    font-weight: bold;
+    position: relative;
+    top: -50px;
+    left: -70px;
+    float: right;
+   
+   }
+    }
+    @media (max-width:736px){
+        #div.banner:active{
+            width: 75px;
+            height: 75px
+         }
+    }
+
+    @media (max-width:736px){
+        .dropdown-at img {
+            margin: 0 0em 0 1em;
+            position: relative;
+            top: -105px;
+            left: 0px;
+            width: 55px;
+        }
+
+
+
+
+    }
 
 .details{
     position: relative;
@@ -446,7 +515,16 @@ button.btn-primary.btn{
     
 }
 
-
+#username{
+    position:relative;
+    top:40px;
+    left:-30px;
+}
+input#username.form-control1 {
+    position: relative;
+    top: 40px;
+    left: -30px;
+}
 
 #create_customer{
     margin-left: 500px;
@@ -454,6 +532,17 @@ button.btn-primary.btn{
     background: yellowgreen;
     border-style: none;
     
+}
+@media(max-width:738px){
+#create_customer {
+    margin-left: 0px;
+    width: 160px;
+    margin-bottom: 3px;
+    background: yellowgreen;
+    border-style: none;
+    font-size: 12px;
+}
+
 }
 #checkin{
     position: relative;
@@ -620,6 +709,7 @@ span.fa.arrow {
     position: inherit;
     margin: 0 0 0 240px;
     min-height: 1000px;
+    
   }
 }
 
@@ -639,6 +729,12 @@ a.dropdown-toggle.dropdown-at {
     border-bottom: none;
 }
 
+@media (max-width: 736px){
+.navbar-header {
+    background-color: #e6e79a;
+}
+
+}
 
 div.content-main {
     background-image: url('../../../jubelsusu/client/src/images/ba.jpg');
@@ -646,6 +742,11 @@ div.content-main {
     background-size: cover;
     
 }
+
+
+
+
+
 .navbar-right-left{
 	float: right;
 }
@@ -1638,6 +1739,28 @@ input.form-control.input-sm,select.form-control.input-sm {
 input#disabledTextInput,select#disabledSelect {
     background-color: #FFF;
 }
+
+@media (max-width: 738px){
+input#username.form-control1{
+        position: relative;
+        top: 40px;
+        left: 0px;
+
+    }
+}
+
+
+@media (max-width: 738px){
+    div.imageupload{
+        position: relative;
+        top: -740px;
+        left: 15px;
+        font-size: 13px;
+        opacity: 0.8;
+    }
+        }
+    
+
 .email-list1{
 	 background-color: #fff;
     padding: 1.8em;
@@ -2117,11 +2240,65 @@ label.control-label {
     width: 900px;
 }
 
+@media (max-width: 738px){
+    #choose {
+        position: relative;
+        top: 50px;
+        left: 30px;
+        height: 40px;
+        width: 320px;
+    }
+}
+
+
+
+@media (max-width: 738px){
+
+    #lab {
+        position: relative;
+        left: 30px;
+        bottom: -78px;
+        top: 30px;
+    }
+
+}
 #file{
     position: relative;
     top: -840px;
     left: -330px;
 }
+
+
+@media (max-width: 738px){
+    #file{
+        position: relative;
+        left: -370px;
+        top: -760px;
+        font-size: 10px;
+    }
+    }
+
+
+    @media (max-width: 540px){
+#file {
+    position: relative;
+    left: -380px;
+    top: -760px;
+    font-size: 9px;
+}
+
+}
+
+
+
+@media (max-width: 368px){
+    #file{
+        position: relative;
+        left: -300px;
+        top: -760px;
+        font-size: 10px;
+    }
+    }
 
 .imageupload{
     position: relative;
@@ -2593,9 +2770,36 @@ img.card-img-top{
 span.nav-label{
     position: relative;
     left: 30px;
-    font-size: 16px;
-    
-    
+    font-size: 16px;   
+}
+
+@media (max-width: 738px){
+    .form-control1 {
+        border: 1px solid #ced4da;
+        padding: 5px 8px;
+        color: #616161;
+        width: 80%;
+        font-size: 0.85em;
+        font-weight: 300;
+        height: 40px;
+        -webkit-appearance: none;
+        outline: none;
+        font-family: system-ui;
+        background: none;
+        box-shadow: none !important;
+        position: relative;
+        top: 40px;
+        left: 0px;
+    }
+}
+
+@media (max-width: 738px){
+
+    span.nav-label {
+        position: relative;
+        font-size: 13px;
+        white-space: nowrap;
+    }
 }
 .lastname{
     position: relative;
@@ -2947,9 +3151,7 @@ form.navbar-form.navbar-right {
 .hvr-bounce-to-right:before {
     right: 93%;
 }
-.navbar-header {
-    background-color: #D95459;
-}
+
 h1 a.navbar-brand {
     width: 152px;
 }
@@ -3128,9 +3330,7 @@ div#home {
 }
 }
 @media(max-width:404px){
-span.name-caret {
-    display: none;
-}
+
 .navbar-left-right {
     width: 74%;
 }

@@ -3353,9 +3353,7 @@ div#home {
 }
 }
 @media(max-width:404px){
-span.name-caret {
-    display: none;
-}
+
 .navbar-left-right {
     width: 74%;
 }

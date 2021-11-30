@@ -401,6 +401,16 @@ input#accountnumber.form-control1{
 } */
 
 
+@media (max-width: 738px){
+    #choose {
+        position: relative;
+        top: 80px;
+        left: 30px;
+        height: 40px;
+        width: 320px;
+    }
+}
+
 span.name-caret{
     font-family: system-ui;
     font-style: inherit;
@@ -1933,6 +1943,29 @@ input#disabledTextInput,select#disabledSelect {
    top: 40px;
    left: -30px;
 }
+@media (max-width: 738px){
+    .form-control1 {
+        border: 1px solid #ced4da;
+        padding: 5px 8px;
+        color: #616161;
+        width: 80%;
+        font-size: 0.85em;
+        font-weight: 300;
+        height: 40px;
+        -webkit-appearance: none;
+        outline: none;
+        font-family: system-ui;
+        background: none;
+        box-shadow: none !important;
+        position: relative;
+        top: 40px;
+        left: 0px;
+    }
+}
+
+
+
+
 .input-lg {
     border-radius: 0px;
 }
@@ -3353,9 +3386,7 @@ div#home {
 }
 }
 @media(max-width:404px){
-span.name-caret {
-    display: none;
-}
+
 .navbar-left-right {
     width: 74%;
 }

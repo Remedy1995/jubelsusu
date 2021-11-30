@@ -4,14 +4,16 @@ import na from './images/na.jpg';
 import Sidebar from "./sidebar";
 import Slider from './slider';
 import AdminHeader from "./adminheader";
+import { useMediaQuery } from 'react-responsive'
+// import OneButton from "./button";
  function  Dashboard(){
 	const [data,setdata]=useState(null);
 	const [total,settotal]=useState(null);
 	const [deposit,totaldeposit]=useState(null);
 	const [withdrawal,totalwithdrawal]=useState(null);
 	const [commission,setcommission]=useState(null);
-
-
+    
+	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 738px)' })
 
 
 	React.useEffect( () => {
@@ -45,18 +47,31 @@ import AdminHeader from "./adminheader";
       console.log(totaldep)
 
 	  //get the total withdrawal
-
 	  React.useEffect( () => {
 		fetch("/gettotalwithdrawal/gettotalwithdrawal").then((res) => res.json()).then((withdrawal) => totalwithdrawal(withdrawal))}, []);
 		var totalwith=!withdrawal?"":withdrawal.map(num=>(num.total));
+		const [show,setShow]=useState(true);
+		
+		function OpenSidebar(){
+			setShow(!show)
+			
+		  }
 return(
 	<div>
 <div id="wrapper">
 
  <AdminHeader/>
-		 <Sidebar/>
+ 
+ <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample" style={{background:"black"}} onClick={OpenSidebar} >
+                    <span className="sr-only" style={{color:"yellowgreen"}}>Toggle navigation</span>
+                    <span className="icon-bar" ></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                </button>
+
+		{show?<Sidebar/>:null}
         
-        <div id="page-wrapper" className="gray-bg dashbard-1">
+      {show && isTabletOrMobile ?"" :<div id="page-wrapper" className="gray-bg dashbard-1">
        <div className="content-main" style={{background:"white"}}>
  
   			
@@ -138,6 +153,7 @@ return(
 		</div>
 		<div className="clearfix"> </div>
        </div>
+ }
      </div>
 
 </div>

@@ -1,18 +1,21 @@
 import React,{useState}  from "react";
 import {Switch,Link} from 'react-router-dom';
 import { useHistory } from "react-router-dom";
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome,faUserPlus ,faDollarSign,faMoneyCheckAlt,faUsers,faHistory,faUpload,faEye,faKey,faPowerOff } from '@fortawesome/free-solid-svg-icons';
+
 function Sidebar(){
     const  history = useHistory();
 	const [data,setdata]=useState(null);
+  // const [show,setShow]=useState(true)
 	React.useEffect(() => {
 		fetch('/changeadminpassword/changeadminpassword').then((res) => res.json()).then((data) => setdata(data))
 	  }, []);
 	   console.log(!data?"":data)
 	    var id=!data?"":data;
 
+      
         function logout(event) {
             event.preventDefault(); // prevent page transition
             fetch("/logout").then({
@@ -20,12 +23,31 @@ function Sidebar(){
         history.replace("/")
 
     }
+
+    // function OpenSidebar(){
+    //   setShow(!show)
+
+
+
+      
+    // }
+
     return(
+    
         <div>
-               <div className="navbar-default sidebar" role="navigation">
+          {/* <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample" style={{background:"black"}} onClick={OpenSidebar} >
+                    <span className="sr-only" style={{color:"yellowgreen"}}>Toggle navigation</span>
+                    <span className="icon-bar" ></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                </button> */}
+
+<div className="navbar-default sidebar" id="collapseExample">
                 <div className="sidebar-nav navbar-collapse">
                 <ul className="nav" id="side-menu">
 				
+
+            
                     <li>
                        
              <Switch><React.Fragment>
@@ -91,6 +113,7 @@ function Sidebar(){
             </div>
 			</div>
         </div>
+   
     )
 }
 

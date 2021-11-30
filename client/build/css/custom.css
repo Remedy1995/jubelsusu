@@ -268,6 +268,12 @@ td span{
    top: 40px;
    left: -30px;
 }
+
+
+
+
+
+
 .form-control {
     box-shadow: none;
     outline: none;
@@ -446,8 +452,24 @@ input#file.saveFile{
     top: -580px;
     left: -320px;
 }
-
-
+@media (max-width: 738px){
+    input#file.saveFile{
+    position: relative;
+    top: -760px;
+    left: -380px;
+    }
+}
+@media(max-width:738px){
+    #create_customer {
+        margin-left: 0px;
+        width: 160px;
+        margin-bottom: 3px;
+        background: yellowgreen;
+        border-style: none;
+        font-size: 12px;
+    }
+    
+    }
 
 div#choose{
     position: relative;
@@ -456,6 +478,24 @@ div#choose{
     height: 40px;
     width: 710px;
 }
+
+@media (max-width: 738px){
+input#username.form-control1 {
+    position: relative;
+    top: 40px;
+    left: 0px;
+}
+}
+@media (max-width: 738px){
+    #choose {
+        position: relative;
+        top: 50px;
+        left: 30px;
+        height: 40px;
+        width: 320px;
+    }
+}
+
 
 
 span.name-caret{
@@ -632,6 +672,27 @@ input#username.form-control1{
         top: -170px;
         left: 120px;            
 }
+
+@media (max-width: 738px){
+    input#username.form-control1{
+            position: relative;
+            top: 40px;
+            left: 0px;
+    
+        }
+    }
+    
+    @media (max-width: 738px){
+.imageupload{
+    position: relative;
+    top: -740px;
+    left: 15px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+    }
+
+
 
 input#accountnumber.depositorcheck{
     position: relative;
@@ -869,6 +930,19 @@ button.btn-primary.btn{
     position: relative;
     left: -70px;
     bottom: -78px;
+}
+
+
+
+@media (max-width: 738px){
+
+    #lab {
+        position: relative;
+        left: 30px;
+        bottom: -78px;
+        top: 30px;
+    }
+
 }
 nav.top1.navbar.navbar-default.navbar-static-top {
   background-color:rgb(6, 217, 149);
@@ -1109,6 +1183,16 @@ div.imageupload {
 .dropdown-at img{
         margin: 0 0em 0 1em;
 }
+@media (max-width: 768px){
+.dropdown-at img {
+    margin: 0 0em 0 1em;
+    position: relative;
+    top: -80px;
+    left: -60px;
+}
+}
+
+
 i.fa.fa-globe {
     font-size: 1.8em;
     color: #999;
@@ -1999,6 +2083,28 @@ input#disabledTextInput,select#disabledSelect {
    top: 40px;
    left: -30px;
 }
+
+
+@media (max-width: 738px){
+    .form-control1 {
+        border: 1px solid #616161;
+        padding: 5px 8px;
+        color: #616161;
+        width: 80%;
+        font-size: 0.85em;
+        font-weight: 300;
+        height: 40px;
+        -webkit-appearance: none;
+        outline: none;
+        font-family: system-ui;
+        background: none;
+        box-shadow: none !important;
+        position: relative;
+        top: 40px;
+        left: 0px;
+    }
+}
+
 .input-lg {
     border-radius: 0px;
 }
@@ -3267,8 +3373,9 @@ form.navbar-form.navbar-right {
     right: 93%;
 }
 .navbar-header {
-    background-color: #D95459;
+    background-color: yellowgreen;
 }
+
 h1 a.navbar-brand {
     width: 152px;
 }
@@ -3821,5 +3928,21 @@ ul.dropdown-menu.dropdown-menu-right {
     .navbar-top-links .dropdown-alerts {
         margin-left: auto;
     }
+
+
+}
+img{
+    
 }
 
+@media (max-width: 768px){
+
+img{
+    border-radius: 100px;
+     position: relative;
+     top: -80px;
+     left: -60px;
+ 
+ }
+
+}
