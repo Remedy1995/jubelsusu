@@ -258,7 +258,7 @@ div#wrapper {
         width: 247px;
         float: left;
         position: relative;
-         top: -111px;
+         top: -60px;
     }
     }
     @media (max-width:736px){
@@ -268,10 +268,17 @@ button.navbar-toggle{
     position: absolute;
     top: 10px;
     width: 9%;
-    left: 340px;
+    left: 320px;
 }}
-
-
+@media (max-width: 536px){
+span.name-caret {
+    font-size: 11px;
+    position: relative;
+    top: -50px;
+    left: -70px;
+    float: right;
+}
+}
     @media (max-width:736px){
    span.name-caret{
     color: darkorchid;
@@ -295,9 +302,8 @@ button.navbar-toggle{
         .dropdown-at img {
             margin: 0 0em 0 1em;
             position: relative;
-            top: -105px;
-            left: 0px;
-            width: 55px;
+            left: -40px;
+            width: 55px
         }
 
 
