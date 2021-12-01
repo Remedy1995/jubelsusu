@@ -6,6 +6,7 @@ import swal from "sweetalert";
 import axios from "axios";
 import {useHistory} from 'react-router-dom';
 import AdminHeader from "./adminheader";
+import { useMediaQuery } from 'react-responsive'
 function Registercustomer(){
 	let history=useHistory();
 	const [file, setFile] = useState();
@@ -18,6 +19,15 @@ function Registercustomer(){
 	const [date,setDate]=useState("");
 	const [phone,setPhone] =useState("");
 	const [agentname,setAgentname]=useState("");
+
+	const [show,setShow]=useState(true);
+	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 738px)' })
+
+	
+	function OpenSidebar(){
+		setShow(!show)
+		
+	  }
 	const saveFirstname = (e) => {
 		e.preventDefault();
 		setFirstname(e.target.value);
@@ -134,9 +144,15 @@ return(
 
 
  <AdminHeader/>
-		 <Sidebar/>
+ <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample" style={{background:"black"}} onClick={OpenSidebar} >
+                    <span className="sr-only" style={{color:"yellowgreen"}}>Toggle navigation</span>
+                    <span className="icon-bar" ></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                </button>
+				{show?<Sidebar/>:null}
         
-        <div id="page-wrapper" className="gray-bg dashbard-1">
+		 {show && isTabletOrMobile ?"" :   <div id="page-wrapper" className="gray-bg dashbard-1">
        <div className="content-main" style={{background:"white"}}>
  
   			
@@ -282,9 +298,10 @@ return(
 		</div>
 		<div className="clearfix"> </div>
        </div>
-    
+}
 
 </div>
+
 );
 }
 export default Registercustomer;

@@ -5,8 +5,10 @@ import swal from "sweetalert";
 import axios from "axios";
 import AgentSidebar from "./agentsidebar";
 import Header from "./header.jsx";
+import { useMediaQuery } from 'react-responsive'
 function AgentCreateUser(){
 	
+
 	const [file, setFile] = useState();
 	const [fileName, setFileName] = useState("");
 	const [firstname, setFirstname] = useState("");
@@ -17,6 +19,14 @@ function AgentCreateUser(){
 	const [date,setDate]=useState("");
 	const [phone,setPhone] =useState("");
 	const [agentname,setAgentname]=useState("");
+	const [show,setShow]=useState(true);
+	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 738px)' })
+
+	
+	function OpenSidebar(){
+		setShow(!show)
+		
+	  }
 	const saveFirstname = (e) => {
 		e.preventDefault();
 		setFirstname(e.target.value);
@@ -133,9 +143,15 @@ return(
 
 
  <Header/>
-		 <AgentSidebar/>
+ <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample" style={{background:"black"}} onClick={OpenSidebar} >
+                    <span className="sr-only" style={{color:"yellowgreen"}}>Toggle navigation</span>
+                    <span className="icon-bar" ></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                </button>
+				{show?<AgentSidebar/>:null}
         
-        <div id="page-wrapper" className="gray-bg dashbard-1">
+				{show && isTabletOrMobile ?"" :   <div id="page-wrapper" className="gray-bg dashbard-1">
        <div className="content-main" style={{background:"white"}}>
  
   			
@@ -278,9 +294,10 @@ return(
 {/* <Footer/> */}
 		</div>
 		<div className="clearfix"> </div>
+						
        </div>
-    
 
+}
 </div>
 );
 }
