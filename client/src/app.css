@@ -560,7 +560,8 @@ input#username.form-control1 {
 
 #lab{
     position: relative;
-    left: -70px;
+    top: 40px;
+    left: -30px;
     bottom: -78px;
 }
 #lab1{
@@ -2240,10 +2241,10 @@ label.control-label {
 
 #choose{
     position: relative;
-    top: 80px;
+    top: 50px;
     left: -40px;
     height: 40px;
-    width: 900px;
+    width: 700px;
 }
 
 @media (max-width: 738px){
@@ -2251,7 +2252,7 @@ label.control-label {
         position: relative;
         top: 50px;
         height: 40px;
-        width: 259px
+        width: 270px
     }
 }
 
