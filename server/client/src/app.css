@@ -315,7 +315,15 @@ span.name-caret {
     position: relative;
     left: 280px;
 }
+@media (max-width:736px){
 
+    .details {
+        position: relative;
+        left: 142px;
+    }
+
+
+}
 .details1{
     position: relative;
     left: 200px;
