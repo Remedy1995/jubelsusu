@@ -319,7 +319,7 @@ span.name-caret {
 
     .details {
         position: relative;
-        left: 154px;
+        left: 150px;
     }
 
 
@@ -344,7 +344,7 @@ span.name-caret {
 
 .adminfirstname{
     position: relative;
-    left: -140px;
+    left: -130px;
 }
 
 
@@ -358,7 +358,7 @@ span.name-caret {
 
 .adminusername{
     position: relative;
-    left: -280px;
+    left: -150px;
 }
 .adminlastname{
     position: relative;
@@ -2480,7 +2480,7 @@ td i{
 
 
 #btn-b{
-    margin-left: 110px;
+    margin-left: -30px;
     margin-bottom: -30px;
     background-color: crimson;
     border-color: crimson;
