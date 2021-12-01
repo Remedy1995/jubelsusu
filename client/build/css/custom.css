@@ -354,7 +354,17 @@ p#jubel {
     left: -40px;
     
 }
-
+@media (max-width: 768px){
+    button#btn-b.btn-primary.btn{
+        margin-left: -5px;
+        font-size: 8px;
+        position: relative;
+        left: -8px;
+        height: 19px;
+        background-color: #dc143c;
+        border-color: #dc143c;
+    }
+}
 
 
 button#btn-b.btn-primary.btn{
@@ -363,6 +373,8 @@ button#btn-b.btn-primary.btn{
     background-color: #dc143c;
     border-color: #dc143c;
 }
+
+
 
 input#username1.form-control1{
     position: relative;
