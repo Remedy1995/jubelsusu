@@ -133,7 +133,6 @@ div.banner{
     display: block;
     margin: 0 1em;
     padding: 1em;
-    background: #e1f4bc;
 }
 nav.navbar-default.navbar-static-top{
     background: rgb(229, 231, 134);
@@ -268,12 +267,6 @@ td span{
    top: 40px;
    left: -30px;
 }
-
-
-
-
-
-
 .form-control {
     box-shadow: none;
     outline: none;
@@ -349,81 +342,29 @@ h2{
 	font-size: 0.8em;
 	font-family: system-ui;
 }
-p#jubel {
+p#jubel{
+    color: #1916f3!important;
+    font-size: 30px;
+    font-weight: 500;
     position: relative;
-    left: -40px;
-    
-}
-
-
-
-button#btn-b.btn-primary.btn{
-    margin-left: 105px;
-    margin-bottom: -30px;
-    background-color: #dc143c;
-    border-color: #dc143c;
+    left: -20px;
+    padding: 20px 0;
+    background:yellowgreen;
+    text-align: center;
+    width: 248px;
+    height: 75px;
+    font-family: system-ui;
 }
 
 input#username1.form-control1{
     position: relative;
     top: -48px;
-    left: 670px;
+    left: 800px;
     width: 400px;
-    border: 3px solid white;
-    border-radius: 8px;
-}
-
-input#fullname.searchfullname{
-    position: relative;
-    left: 700px;
-    top: -50px;
-    width: 300px;
-    border-radius: 12px;
-    border: 3px solid #d0cdcd;
-    height: 40px;
-}
-
-div.content-top-a {
-    background-color: #a03a3a;
-    padding: 1.8em;
-    margin-bottom: 1em;
-    border: 1px solid #ebeff6;
-    position: relative;
-    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
-    top: -169px;
-    left: 370px;
-}
-
- div.content-top-b {
-    background-color: #217e93;
-    padding: 1.8em;
-    margin-bottom: 1em;
-    border: 1px solid #ebeff6;
-    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
-    position: relative;
-    top: -337px;
-    left: 740px;
 }
 
 
-input#searchusername.form-control1{
-    width: 300px;
-    position: relative;
-    left: 380px;
-    border: 3px solid #d0cdcd;
-    border-radius: 8px;
 
-}
-
-input#accountnumber.accoun1{
-    position: relative;
-    top: -48px;
-    left: 640px;
-    width: 400px;
-    border: 3px solid #e0e0e0;
-    border-radius: 8px;
-    height: 40px;
-}
 h6.amo{
      font-size: 2.5em;
     color: #b642f3;
@@ -432,71 +373,67 @@ h6.amo{
 
 input#fullname.form-control1{
     position: relative;
-    top: -75px;
-    left: 170px;
-    width: 300px;
-     border: 3px solid #e0e0e0;
-    border-radius: 8px;
-}
-input#accountnumber.form-control1{
-   position: relative;
-    top: -75px;
-    left: 150px;
-    width: 400px;
-    border: 3px solid #e0e0e0;
-    border-radius: 8px;
+    top: -45px;
+    left: 430px;
+    width: 250px;
 
 }
-input#file.saveFile{
+
+
+@media (max-width: 738px){
+    button#btn-b.btn-primary.btn {
+        margin-left: -7px;
+        font-size: 9px;
+        margin-bottom: -30px;
+        background-color: #dc143c;
+        border-color: #dc143c;
+        position: relative;
+        left: -5px;
+        height: 20px;
+        padding-left: 10px;
+    }
+}
+@media (max-width: 738px){
+details {
+    position: relative;
+    left: 150px;
+}
+}
+
+
+
+input#accountnumber.form-control1{
+    position: relative;
+    top: -45px;
+    left: 480px;
+    width: 400px;
+}
+/* input#file.saveFile{
     position: relative;
     top: -580px;
     left: -320px;
-}
-@media (max-width: 738px){
-    input#file.saveFile{
-    position: relative;
-    top: -760px;
-    left: -380px;
-    }
-}
-@media(max-width:738px){
-    #create_customer {
-        margin-left: 0px;
-        width: 160px;
-        margin-bottom: 3px;
-        background: yellowgreen;
-        border-style: none;
-        font-size: 12px;
-    }
-    
-    }
+} */
+
+
 
 /* div#choose{
     position: relative;
     top: 50px;
     left: -30px;
     height: 40px;
-    width: 710px;
+    width: 810px;
 } */
 
-@media (max-width: 738px){
-input#username.form-control1 {
-    position: relative;
-    top: 40px;
-    left: 0px;
-}
-}
+
 @media (max-width: 738px){
     #choose {
         position: relative;
-        top: 50px;
+        top: 80px;
         left: 30px;
         height: 40px;
         width: 320px;
     }
 }
-
-
 
 span.name-caret{
     font-family: system-ui;
@@ -592,14 +529,19 @@ div#wrapper {
 .navbar .navbar-nav li.m_2 a {
   line-height:38px;
 }
-
-
-div.content-top-2 {
+/* div.content-top-2{
     background-color: #a03a3a;
     position: relative;
-    top: -193px;
-    left: 370px;
-}
+    top: -190px;
+    left: 420px;
+} */
+
+/* div.content-top-2 {
+    background-color: #a03a3a;
+    position: relative;
+    top: -168px;
+    left: 420px;
+} */
 
 h4.commission {
     font-weight: 550;
@@ -660,50 +602,17 @@ label{
   box-shadow: none;
 }
 
- div.content-top-3{
+/* div.content-top-3{
     background-color: #217e93;
     position: relative;
-    top: -383px;
-    left: 740px;
+    top: -380px;
     height: 173px;
-} 
+} */
 input#username.form-control1{
         position: relative;
         top: -170px;
         left: 120px;            
 }
-
-@media (max-width: 738px){
-    input#username.form-control1{
-            position: relative;
-            top: 40px;
-            left: 0px;
-    
-        }
-    }
-    
-    @media (max-width: 738px){
-.imageupload{
-    position: relative;
-    top: -740px;
-    left: 15px;
-    font-size: 13px;
-    opacity: 0.8;
-}
-    }
-
-
-
-input#accountnumber.depositorcheck{
-    position: relative;
-    top: -80px;
-    width: 300px;
-    left: 200px;
-    height: 50px;
-    border: 1px solid #e0e0e0;
-}
-
-
 th.username{
         position: relative;
         left: -280px;
@@ -728,12 +637,12 @@ div.content-main{
     height: 1000px;
     background: white;
 }
-span#checkin.input-group-addon{
+/* span#checkin.input-group-addon{
     top: 40px;
     height: 10px;
     left: -30px;
     width: 30px;
-}
+} */
 /* 
 label#lab.col-md-2.control-label{
 left: -20px;
@@ -931,19 +840,6 @@ button.btn-primary.btn{
     left: -70px;
     bottom: -78px;
 }
-
-
-
-@media (max-width: 738px){
-
-    #lab {
-        position: relative;
-        left: 30px;
-        bottom: -78px;
-        top: 30px;
-    }
-
-}
 nav.top1.navbar.navbar-default.navbar-static-top {
   background-color:rgb(6, 217, 149);
 }
@@ -995,16 +891,14 @@ i.nav_icon {
   font-size:14px;
 }
 
-input#accountnumber.accoun {
+/* input#accountnumber.accoun {
     position: relative;
     top: 40px;
     height: 40px;
     left: -30px;
-    width: 680px;
+    width: 780px;
     border: 1px solid #e0e0e0;
-}
-
-
+} */
 
 
 
@@ -1150,13 +1044,13 @@ nav.navbar.navbar-static-top {
 }
 
 
-div.imageupload {
+/* div.imageupload {
     position: relative;
     top: -555px;
     left: 80px;
     font-size: 15px;
     opacity: .7;
-}
+} */
 .navbar-left-right input[type="submit"]{
     /* background: url(../images/search.png) 0px 2px no-repeat; */
     width:16px;
@@ -1183,16 +1077,6 @@ div.imageupload {
 .dropdown-at img{
         margin: 0 0em 0 1em;
 }
-@media (max-width: 768px){
-.dropdown-at img {
-    margin: 0 0em 0 1em;
-    position: relative;
-    top: -80px;
-    left: -60px;
-}
-}
-
-
 i.fa.fa-globe {
     font-size: 1.8em;
     color: #999;
@@ -2083,11 +1967,9 @@ input#disabledTextInput,select#disabledSelect {
    top: 40px;
    left: -30px;
 }
-
-
 @media (max-width: 738px){
     .form-control1 {
-        border: 1px solid #616161;
+        border: 1px solid #ced4da;
         padding: 5px 8px;
         color: #616161;
         width: 80%;
@@ -2104,6 +1986,9 @@ input#disabledTextInput,select#disabledSelect {
         left: 0px;
     }
 }
+
+
+
 
 .input-lg {
     border-radius: 0px;
@@ -2423,34 +2308,6 @@ label.control-label {
     border-bottom: 1px solid #F3F3F4;
     margin-bottom: 1em;
 }
-
-
-
-div.profile-bottom {
-    width: 70%;
-    margin: 0 auto;
-    background-color: rgb(253 255 255);
-    padding: 1em 0;
-    border: 1px solid #ebeff6;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -o-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
-}
-
-
-
-
-
-
-
-
-
-
-
-
 .profile-bottom h3 i{
     font-size: 16px;
     width: 28px;
@@ -2467,7 +2324,7 @@ div.profile-bottom {
     margin-right: 1%;
 }
 .profile-text h6{
-    font-size: 1.5em;
+    font-size: 1.7em;
     color:#000;
     padding: 0em 0.4em 0.3em;
 }
@@ -3373,9 +3230,8 @@ form.navbar-form.navbar-right {
     right: 93%;
 }
 .navbar-header {
-    background-color: yellowgreen;
+    background-color: #D95459;
 }
-
 h1 a.navbar-brand {
     width: 152px;
 }
@@ -3554,9 +3410,7 @@ div#home {
 }
 }
 @media(max-width:404px){
-span.name-caret {
-    display: none;
-}
+
 .navbar-left-right {
     width: 74%;
 }
@@ -3928,21 +3782,5 @@ ul.dropdown-menu.dropdown-menu-right {
     .navbar-top-links .dropdown-alerts {
         margin-left: auto;
     }
-
-
-}
-img{
-    
 }
 
-@media (max-width: 768px){
-
-img{
-    border-radius: 100px;
-     position: relative;
-     top: -80px;
-     left: -60px;
- 
- }
-
-}

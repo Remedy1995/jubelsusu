@@ -2239,6 +2239,28 @@ label.control-label {
     left: 480px;
 }
 
+@media (max-width: 738px){
+    th.adminusername{
+        position: relative;
+        left: -160px;
+    }
+    }
+
+
+    @media (max-width: 738px){
+        th.adminlastname{
+            position: relative;
+            left: -157px;
+        }
+        }
+        @media (max-width: 738px){
+            th.firstname{
+                position: relative;
+                left: -153px;
+            }
+            }
+
+
 #choose{
     position: relative;
     top: 50px;
