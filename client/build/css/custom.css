@@ -359,19 +359,11 @@ p#jubel {
         margin-left: -5px;
         font-size: 8px;
         position: relative;
-        left: -8px;
+        left: -6px;
         height: 19px;
         background-color: #dc143c;
         border-color: #dc143c;
     }
-}
-
-
-button#btn-b.btn-primary.btn{
-    margin-left: 105px;
-    margin-bottom: -30px;
-    background-color: #dc143c;
-    border-color: #dc143c;
 }
 
 

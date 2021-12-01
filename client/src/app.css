@@ -313,13 +313,13 @@ span.name-caret {
 
 .details{
     position: relative;
-    left: 280px;
+   left: 130px;
 }
 @media (max-width:736px){
 
     .details {
         position: relative;
-        left: 142px;
+        left: 154px;
     }
 
 
@@ -344,7 +344,16 @@ span.name-caret {
 
 .adminfirstname{
     position: relative;
-    left: -280px;
+    left: -140px;
+}
+
+
+@media(max-width:738px){
+
+    .adminfirstname{
+        position: relative;
+    left: -155px
+    }
 }
 
 .adminusername{
@@ -353,7 +362,7 @@ span.name-caret {
 }
 .adminlastname{
     position: relative;
-    left: -275px;
+    left: -130px;
 }
 .adminedit{
     position: relative;
@@ -2463,10 +2472,10 @@ td i{
 }
 
 #btn-a{
-    margin-left: 110px;
+    margin-left: -40px;
     margin-bottom: -30px;
-    background-color: crimson;
-    border-color: crimson;
+    background-color: #dc143c;
+    border-color: #dc143c;
 }
 
 
