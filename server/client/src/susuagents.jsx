@@ -280,8 +280,7 @@ return(
 							<div className="col-md-8">
 								<div className="input-group" id="filesee">							
 							
-								{show && isTabletOrMobile?<input type="file" id="file" onChange={saveFile} name="file" className="saveFile"/>
- :<input type="file" id="file" onChange={saveFile} name="file" className="saveFile"/>}
+									<input type="file" id="file" onChange={saveFile} name="file" className="saveFile"/>
 								</div>
 							</div>
 						</div>			

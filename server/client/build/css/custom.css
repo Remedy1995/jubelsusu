@@ -471,13 +471,13 @@ input#file.saveFile{
     
     }
 
-div#choose{
+/* div#choose{
     position: relative;
     top: 50px;
     left: -30px;
     height: 40px;
     width: 710px;
-}
+} */
 
 @media (max-width: 738px){
 input#username.form-control1 {
@@ -734,11 +734,11 @@ span#checkin.input-group-addon{
     left: -30px;
     width: 30px;
 }
-
+/* 
 label#lab.col-md-2.control-label{
 left: -20px;
 bottom: -40px;
-}
+} */
 .progress.thin {
   height: 10px;
 }
