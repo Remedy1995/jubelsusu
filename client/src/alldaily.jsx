@@ -4,11 +4,20 @@ import './app.css';
 import Sidebar from "./sidebar";
 import {Switch,Link} from 'react-router-dom';
 import AdminHeader from "./adminheader";
+import { useMediaQuery } from 'react-responsive'
 
 function AllDaily(){
   const [data, setData] = React.useState(null);
   const [data1, setData1] = React.useState(null);
   const [fullname,setfullname]=useState("");
+  const [show,setShow]=useState(true);
+	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 738px)' })
+
+	
+	function OpenSidebar(){
+		setShow(!show)
+		
+	  }
   function userHandler(e){
     setfullname(e.target.value)
   }
@@ -56,9 +65,15 @@ return (
     <div>
    
  <AdminHeader/>
-		 <Sidebar/>
+ <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample" style={{background:"black"}} onClick={OpenSidebar} >
+                    <span className="sr-only" style={{color:"yellowgreen"}}>Toggle navigation</span>
+                    <span className="icon-bar" ></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                </button>
+                {show?<Sidebar/>:null}
         
-        <div id="page-wrapper" className="gray-bg dashbard-1">
+                {show && isTabletOrMobile ?"" :    <div id="page-wrapper" className="gray-bg dashbard-1">
        <div className="content-main" style={{background:"white"}}>
        
   			
@@ -131,7 +146,9 @@ return (
 		
 		
 {/* <Footer/> */}
+                
 		</div>
+}
 		<div className="clearfix"> </div>
        </div>
     

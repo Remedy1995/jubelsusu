@@ -2,9 +2,17 @@ import React,{useState} from "react";
 import './withdrawalcustomer.jsx';
 import { SpinnerRoundOutlined } from 'spinners-react';
 import CustomerSidebar from "./customersidebar";
+import { useMediaQuery } from 'react-responsive'
 import CustomerHeader from "./customerheader";
 function Customerbalance(){
-  
+  const [show,setShow]=useState(true);
+	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 738px)' })
+
+	
+	function OpenSidebar(){
+		setShow(!show)
+		
+	  }
   
 	
 	
@@ -60,9 +68,15 @@ function Customerbalance(){
   
 
  <CustomerHeader/>
-		 <CustomerSidebar/>
+ <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample" style={{background:"black"}} onClick={OpenSidebar} >
+                    <span className="sr-only" style={{color:"yellowgreen"}}>Toggle navigation</span>
+                    <span className="icon-bar" ></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                </button>
+                {show?<CustomerSidebar/>:null}
         
-        <div id="page-wrapper" className="gray-bg dashbard-1">
+                {show && isTabletOrMobile ?"" :    <div id="page-wrapper" className="gray-bg dashbard-1">
        <div className="content-main" style={{background:"white"}}>
  
   			
@@ -153,7 +167,7 @@ function Customerbalance(){
 		<div className="clearfix"> </div>
        </div>
 
-
+    }
 
         </div>
     )

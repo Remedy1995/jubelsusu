@@ -6,8 +6,9 @@ import {Switch,Link} from 'react-router-dom';
 // import Footer from "./footer";
 import Header from "./header";
 import AgentSidebar from "./agentsidebar";
-
+import { useMediaQuery } from 'react-responsive'
 function AgentDailyTransactions(){
+
   const stylefirstname={
     width: 400,
     position: "relative",
@@ -17,7 +18,14 @@ function AgentDailyTransactions(){
   const [file, setFile] = useState();
   const [fileName, setFileName] = useState("");
   const [fullname,setFullname]=useState("");
-  
+  const [show,setShow]=useState(true);
+	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 738px)' })
+
+	
+	function OpenSidebar(){
+		setShow(!show)
+		
+	  }
   const saveFile = (e) => {
     setFile(e.target.files[0]);
     setFileName(e.target.files[0].name);
@@ -52,9 +60,15 @@ return(
 
 
  <Header/>
-		 <AgentSidebar/>
+ <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample" style={{background:"black"}} onClick={OpenSidebar} >
+                    <span className="sr-only" style={{color:"yellowgreen"}}>Toggle navigation</span>
+                    <span className="icon-bar" ></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                </button>
+                {show?<AgentSidebar/>:null}
         
-        <div id="page-wrapper" className="gray-bg dashbard-1">
+                {show && isTabletOrMobile ?"" : <div id="page-wrapper" className="gray-bg dashbard-1">
        <div className="content-main" style={{background:"white"}}>
  
   			
@@ -93,7 +107,7 @@ return(
 		</div>
 	
        </div>
-    
+}
 
 </div>
 );

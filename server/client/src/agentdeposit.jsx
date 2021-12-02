@@ -4,8 +4,16 @@ import Header from "./header";
 import {Link,Switch} from 'react-router-dom';
 import Spinner from 'react-bootstrap/Spinner'
 import AgentSidebar from "./agentsidebar";
+import { useMediaQuery } from 'react-responsive'
 function AgentMakeDeposit(){
+	const [show,setShow]=useState(true);
+	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 738px)' })
 
+	
+	function OpenSidebar(){
+		setShow(!show)
+		
+	  }
 	const [data, setData] = React.useState(null);
 	const [username,setusername]=useState("");
 	const [useErr,setUseErr]=useState(false);
@@ -126,10 +134,15 @@ return(
 	<div>
 
 
- <Header/>
-		 <AgentSidebar/>
+ <Header/><button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample" style={{background:"black"}} onClick={OpenSidebar} >
+                    <span className="sr-only" style={{color:"yellowgreen"}}>Toggle navigation</span>
+                    <span className="icon-bar" ></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                </button>
+				{show? <AgentSidebar/>:null}
         
-        <div id="page-wrapper" className="gray-bg dashbard-1">
+				{show && isTabletOrMobile ?"" :<div id="page-wrapper" className="gray-bg dashbard-1">
        <div className="content-main" style={{background:"white"}}>
  
   			
@@ -240,7 +253,7 @@ return(
 		</div>
 	
        </div>
-    
+}
 
 </div>
 );

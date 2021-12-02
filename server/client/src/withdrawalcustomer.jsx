@@ -3,9 +3,18 @@ import swal from 'sweetalert';
 import AdminHeader from "./adminheader";
 import './app.css';
 import Sidebar from "./sidebar";
+import { useMediaQuery } from 'react-responsive'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import {faFacebook} from "@fortawesome/free-brands-svg-icons";
 function MakeWithdrawal(){
+	const [show,setShow]=useState(true);
+	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 738px)' })
+
+	
+	function OpenSidebar(){
+		setShow(!show)
+		
+	  }
 	const [usern,setUser]=useState("");
 	const [acc,setAcc]=useState("");
     var myHeaders = new Headers();
@@ -72,9 +81,15 @@ return(
 
 
  <AdminHeader/>
-		 <Sidebar/>
+ <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample" style={{background:"black"}} onClick={OpenSidebar} >
+                    <span className="sr-only" style={{color:"yellowgreen"}}>Toggle navigation</span>
+                    <span className="icon-bar" ></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                </button>
+				{show? <Sidebar/>:null}
         
-        <div id="page-wrapper" className="gray-bg dashbard-1">
+				{show && isTabletOrMobile ?"" :    <div id="page-wrapper" className="gray-bg dashbard-1">
        <div className="content-main" style={{background:"white"}}>
  
   			
@@ -131,7 +146,7 @@ return(
 	
        </div>
     
-
+}
 </div>
 );
 }

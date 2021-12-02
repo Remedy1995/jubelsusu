@@ -4,7 +4,16 @@ import na from './images/na.jpg';
 import Slider from './slider';
 import CustomerSidebar from "./customersidebar";
 import CustomerHeader from "./customerheader";
+import { useMediaQuery } from 'react-responsive'
  function  CustomerDashboard(){
+	const [show,setShow]=useState(true);
+	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 738px)' })
+
+	
+	function OpenSidebar(){
+		setShow(!show)
+		
+	  }
 	const [data,setdata]=useState(null);
 	React.useEffect( () => {
 	 fetch("/getusername/getusername").then((res) => res.json()).then((data) => setdata(data))}, []);
@@ -19,9 +28,15 @@ return(
 <div id="wrapper">
 
  <CustomerHeader/>
-		 <CustomerSidebar/>
+ <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample" style={{background:"black"}} onClick={OpenSidebar} >
+                    <span className="sr-only" style={{color:"yellowgreen"}}>Toggle navigation</span>
+                    <span className="icon-bar" ></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                </button>
+				{show?<CustomerSidebar/>:null}
         
-        <div id="page-wrapper" className="gray-bg dashbard-1">
+				{show && isTabletOrMobile ?"" :     <div id="page-wrapper" className="gray-bg dashbard-1">
        <div className="content-main" style={{background:"white"}}>
  
   			
@@ -102,8 +117,9 @@ return(
 		</div>
 		<div className="clearfix"> </div>
        </div>
+ }
      </div>
-
+ 
 </div>
 );
 }

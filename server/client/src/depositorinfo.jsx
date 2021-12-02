@@ -3,10 +3,18 @@ import Sidebar from "./sidebar";
 import './withdrawalcustomer.jsx';
 import { SpinnerRoundOutlined } from 'spinners-react';
 import { useHistory } from "react-router-dom";
+import { useMediaQuery } from 'react-responsive'
 import AdminHeader from "./adminheader";
 function Depositorinfo(){
   const history = useHistory();
-  
+  const [show,setShow]=useState(true);
+	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 738px)' })
+
+	
+	function OpenSidebar(){
+		setShow(!show)
+		
+	  }
 	const handleRoute = () =>{ 
 	  history.push("/withdrawal");
 	}
@@ -72,9 +80,15 @@ function Depositorinfo(){
   
 
  <AdminHeader/>
-		 <Sidebar/>
+ <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample" style={{background:"black"}} onClick={OpenSidebar} >
+                    <span className="sr-only" style={{color:"yellowgreen"}}>Toggle navigation</span>
+                    <span className="icon-bar" ></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                </button>
+                {show? <Sidebar/>:null}
         
-        <div id="page-wrapper" className="gray-bg dashbard-1">
+                {show && isTabletOrMobile ?"" :<div id="page-wrapper" className="gray-bg dashbard-1">
        <div className="content-main">
  
   			
@@ -170,7 +184,7 @@ function Depositorinfo(){
 		<div className="clearfix"> </div>
        </div>
 
-
+    }
 
         </div>
     )

@@ -6,10 +6,17 @@ import Header from "./header";
 import {useParams} from 'react-router-dom';
 import {Switch,Link} from 'react-router-dom';
 import AgentSidebar from "./agentsidebar";
-
+import { useMediaQuery } from 'react-responsive'
 
 function AgentAllTransactions(){
+  const [show,setShow]=useState(true);
+	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 738px)' })
 
+	
+	function OpenSidebar(){
+		setShow(!show)
+		
+	  }
 
   const [data, setData] = React.useState(null);
   const [accountnumber,setaccountnumber]=useState("");
@@ -62,10 +69,16 @@ return (
 
     <div>
    
- <Header/>
-		 <AgentSidebar/>
+ <Header/><button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample" style={{background:"black"}} onClick={OpenSidebar} >
+                    <span className="sr-only" style={{color:"yellowgreen"}}>Toggle navigation</span>
+                    <span className="icon-bar" ></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                </button>
+
+                {show?<AgentSidebar/>:null}
         
-        <div id="page-wrapper" className="gray-bg dashbard-1">
+                {show && isTabletOrMobile ?"" :<div id="page-wrapper" className="gray-bg dashbard-1">
        <div className="content-main" style={{background:"white"}}>
        
   			
@@ -117,7 +130,9 @@ return (
 		
 		
 {/* <Footer/> */}
+                
 		</div>
+}
 		<div className="clearfix"> </div>
        </div>
     

@@ -7,7 +7,16 @@ import AdminHeader from "./adminheader";
 import swal from "sweetalert";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import { useMediaQuery } from 'react-responsive'
 function UploadAgentId(){
+  const [show,setShow]=useState(true);
+	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 738px)' })
+
+	
+	function OpenSidebar(){
+		setShow(!show)
+		
+	  }
     let history = useHistory();
 	const {id} = useParams();
 
@@ -46,9 +55,15 @@ return(
 
 
  <AdminHeader/>
-		 <Sidebar/>
+ <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample" style={{background:"black"}} onClick={OpenSidebar} >
+                    <span className="sr-only" style={{color:"yellowgreen"}}>Toggle navigation</span>
+                    <span className="icon-bar" ></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                </button>
+                {show? <Sidebar/>:null}
         
-        <div id="page-wrapper" className="gray-bg dashbard-1">
+                {show && isTabletOrMobile ?"" :     <div id="page-wrapper" className="gray-bg dashbard-1">
        <div className="content-main" style={{background:"white"}}>
  
   			
@@ -89,7 +104,7 @@ return(
 		</div>
 	
        </div>
-    
+}  
 
 </div>
 );

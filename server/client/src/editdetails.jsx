@@ -4,8 +4,16 @@ import './app.css';
 import Sidebar from "./sidebar";
 import {useParams} from 'react-router-dom';
 import AdminHeader from "./adminheader";
-
+import { useMediaQuery } from 'react-responsive'
 function EditDetails(){
+	const [show,setShow]=useState(true);
+	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 738px)' })
+
+	
+	function OpenSidebar(){
+		setShow(!show)
+		
+	  }
 	const {id} = useParams();
 	const [usern,setUser]=useState("");
 	const [useErr,setUserErr]=useState(false);
@@ -119,9 +127,15 @@ return(
 
 
  <AdminHeader/>
-		 <Sidebar/>
+ <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample" style={{background:"black"}} onClick={OpenSidebar} >
+                    <span className="sr-only" style={{color:"yellowgreen"}}>Toggle navigation</span>
+                    <span className="icon-bar" ></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                </button>
+				{show? <Sidebar/>:null}
         
-        <div id="page-wrapper" className="gray-bg dashbard-1">
+				{show && isTabletOrMobile ?"" :  <div id="page-wrapper" className="gray-bg dashbard-1">
        <div className="content-main" style={{background:"white"}}>
  
   			
@@ -229,7 +243,7 @@ return(
 	
        </div>
     
-
+}
 </div>
 );
 }

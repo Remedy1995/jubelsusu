@@ -3,8 +3,16 @@ import './withdrawalcustomer.jsx';
 import { SpinnerRoundOutlined } from 'spinners-react';
 import AgentSidebar from "./agentsidebar";
 import Header from "./header.jsx";
+import { useMediaQuery } from 'react-responsive'
 function AgentDepositorinfo(){
-  
+  const [show,setShow]=useState(true);
+	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 738px)' })
+
+	
+	function OpenSidebar(){
+		setShow(!show)
+		
+	  }
   
 	
 	
@@ -60,9 +68,15 @@ function AgentDepositorinfo(){
   
 
  <Header/>
-		 <AgentSidebar/>
+ <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample" style={{background:"black"}} onClick={OpenSidebar} >
+                    <span className="sr-only" style={{color:"yellowgreen"}}>Toggle navigation</span>
+                    <span className="icon-bar" ></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                </button>
+                {show? <AgentSidebar/>:null}
         
-        <div id="page-wrapper" className="gray-bg dashbard-1">
+                {show && isTabletOrMobile ?"" :  <div id="page-wrapper" className="gray-bg dashbard-1">
        <div className="content-main">
  
   			
@@ -153,7 +167,7 @@ function AgentDepositorinfo(){
 		<div className="clearfix"> </div>
        </div>
 
-
+    }
 
         </div>
     )
