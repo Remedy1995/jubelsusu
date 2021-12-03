@@ -89,11 +89,11 @@ return(
 							<div className="col-md-8">
 								<div className="input-group">
 								
-									<input type="text" className="form-control1" id="fullname" name="fullname" placeholder="fullname" onChange={saveFullname} style={stylefirstname} />
+									<input type="text" className="form-control4" id="fullname" name="fullname" placeholder="fullname" onChange={saveFullname} style={stylefirstname} />
 								</div>
 							</div>
 						</div>
-            <input type="file" onChange={saveFile} name="file" className="saveFile"/>
+            <input type="file" onChange={saveFile} name="file" className="saveFile" id="dailysave"/>
           <button  onClick={uploadFile} className="btn-primary btn" value="Upload  Daily Transactions" >Upload Daily Transactions</button>
           </form> 
 	</div>

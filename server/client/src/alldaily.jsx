@@ -108,7 +108,7 @@ return (
    <tr className="details1"><td>
      
      
-   {!data1 ? "" : data1.map(num=>(<tr style={{border:"1px solid #ddd",background:"burlywood"}}><td>{num.date}</td><td>{num.lastname}</td><td>
+   {!data1 ? "" : data1.map(num=>(<tr style={{background:"burlywood"}} className="table-data"><td>{num.date}</td><td>{num.lastname}</td><td>
      
    <Switch><React.Fragment><Link to={num.image} color="transparent"
       target="_blank"
@@ -122,9 +122,9 @@ return (
 
  } </td></td></tr>))}
      
-     {!data ? "Loading..." : data.map(num=>(<tr style={{border:"1px solid #ddd"}}><td>{num.date}</td><td>{num.lastname}</td><td> <Switch><React.Fragment><Link to={num.image} color="transparent"
+     {!data ? "Loading..." : data.map(num=>(<tr  className="table-data"><td>{num.date}</td><td>{num.lastname}</td><td> <Switch><React.Fragment><Link to={num.image} color="transparent"
       target="_blank"
-      download><img src={num.image} height="50" width="50" alt=""></img>
+      download><img src={num.image} height="50" width="50" alt="" id="dailyimage"></img>
       </Link></React.Fragment></Switch></td>
    <td>
    {num.fullname}</td>

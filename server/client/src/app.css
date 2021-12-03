@@ -328,11 +328,126 @@ span.name-caret {
     position: relative;
     left: 200px;
 }
+
+.form-control3{
+     border: 1px solid #e0e0e0;
+    padding: 5px 8px;
+    color: #616161;
+    width: 100%;
+    font-size: 0.85em;
+    font-weight: 300;
+    height: 40px;
+    -webkit-appearance: none;
+	outline: none;
+	font-family: system-ui;
+	background: none;
+   box-shadow:none !important;
+        position: relative;
+        top: -80px;
+        left: 150px;
+        width: 400px;
+    
+}
+
+@media (max-width:736px){
+.form-control3{
+    position: relative;
+    top: -50px;
+    left: 14px;
+    width: 306px;
+}
+
+}
+
+@media (max-width:736px){
+    button.btn-primary.btn {
+        margin-left: 15px;
+        margin-bottom: -70px;
+        background: #9acd32;
+        border-style: none;
+    }
+}
+
+.form-control4{
+    border: 1px solid #e0e0e0;
+    padding: 5px 8px;
+    color: #616161;
+    font-size: 0.85em;
+    font-weight: 300;
+    height: 40px;
+    -webkit-appearance: none;
+	outline: none;
+	font-family: system-ui;
+	background: none;
+   box-shadow:none !important;
+   width: 400px;
+    position: relative;
+    top: -5px;
+    left: 150px;
+}
+@media (max-width:736px){
+.form-control4{
+    width: 220px;
+    position: relative;
+    top: 3px;
+    left: 11px
+}
+}
+@media (max-width:736px){
+
+#dailysave{
+    position: relative;
+    left: -490px; 
+}
+
+}
+
+.table-data{
+    
+    border:1px solid #ddd;
+}
+
+@media (max-width:736px){
+    .details1{
+         position: relative;
+        left: 18px;
+    }
+}
+
+@media (max-width:736px){
+ .trans{
+    left: -140px;
+    font-size: 13px;
+ }
+
+}
+@media (max-width:736px){
+.file{
+    left: 15px;
+}
+}
+
+@media (max-width:736px){
+.FullName {
+        position: relative;
+        left: 30px;
+    }
+}
+
 #username{
     position: relative;
     top: -160px;
     left: 120px;
 }
+@media (max-width:736px){
+#dailyimage{
+    position: relative;
+    left: 10px;
+    top: -1px;
+}
+}
+
+
 
 .accountnumber{
     position: relative;
