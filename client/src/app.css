@@ -286,11 +286,59 @@ span.name-caret {
     font-weight: bold;
     position: relative;
     top: -50px;
-    left: -70px;
+    left: -50px;
     float: right;
    
    }
     }
+
+    @media (max-width:736px){
+
+h4.welcome{
+    color: blueviolet;
+    margin-left: 20px;
+    font-family: system-ui;
+    font-size: 16px;
+}
+
+    }
+
+    @media (max-width:736px){
+    div.content-top-1 {
+        background-color: #5448bd;
+        padding: 1.8em;
+        margin-bottom: 1em;
+        border: 1px solid #ebeff6;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -o-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    }
+    }
+
+
+    @media (max-width:736px){
+        div.content-top-2 {
+            background-color: #a03a3a;
+            position: relative;
+            top: 0px;
+            left: -2px;
+        }
+    }
+
+    @media (max-width:736px){
+    div.content-top-3 {
+        background-color: #217e93;
+        position: relative;
+        top: -0px;
+        left: 0px;
+        height: 173px;
+    }
+
+}
+
     @media (max-width:736px){
         #div.banner:active{
             width: 75px;
@@ -298,6 +346,19 @@ span.name-caret {
          }
     }
 
+
+    @media (max-width:736px){
+
+
+        img.card-img-top {
+            height: 200px;
+            margin-top: -40px;
+            margin-left: 60px;
+            border-radius: 0px;
+        }
+
+
+    }
     @media (max-width:736px){
         .dropdown-at img {
             margin: 0 0em 0 1em;
@@ -430,12 +491,36 @@ span.file{
 }
 
 @media (max-width:736px){
-.FullName {
+span.FullName {
         position: relative;
         left: 40px;
     }
 }
 
+@media (max-width:736px){
+
+    .accoun {
+        position: relative;
+        top: 40px;
+        height: 40px;
+        left: 0px;
+        width: 260px;
+        border: 1px solid #e0e0e0;
+    }
+}
+@media (max-width:736px){
+
+h4.commission{
+    font-weight: 550;
+    color: #00f;
+    float: right;
+    font-family: system-ui;
+    margin-top: -30px;
+    font-size: 12px;
+}
+
+
+}
 
 @media (max-width:736px){
 input#fullname.searchfullname {
@@ -2450,6 +2535,19 @@ label.control-label {
     left: 480px;
 }
 
+
+
+@media (max-width:736px){
+    input#searchusername.form-control1 {
+        width: 270px;
+        top: -20px;
+        position: relative;
+        left: 30px;
+        border: 3px solid #d0cdcd;
+        border-radius: 8px;
+    }
+}
+
 @media (max-width: 738px){
     th.adminusername{
         position: relative;
@@ -3840,4 +3938,11 @@ button.btn-primary.btn {
     background: #9acd32;
     border-style: none;
 }
+}
+
+
+
+
+#input#account.form-control3{
+    width: 300px;
 }
