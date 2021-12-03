@@ -3744,3 +3744,11 @@ ul.dropdown-menu.dropdown-menu-right {
     font-size: 1.6em;
 }
 }
+
+
+@media (max-width:736px){
+    .banner h2 span {
+        color: #000;
+        white-space: nowrap;
+    }
+}
