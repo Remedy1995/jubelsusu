@@ -413,21 +413,6 @@ p#jubel {
     }
 }
 
-@media (max-width:736px){
-div.profile-bottom {
-    width: 95%;
-    margin: 0em auto;
-    background-color: rgb(253 255 255);
-    padding: 1em 0;
-    border: 1px solid #ebeff6;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -o-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
-}
-}
 
 input#username1.form-control1{
     position: relative;
@@ -2491,19 +2476,7 @@ label.control-label {
 
 
 
-div.profile-bottom {
-    width: 70%;
-    margin: 0 auto;
-    background-color: rgb(253 255 255);
-    padding: 1em 0;
-    border: 1px solid #ebeff6;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -o-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
-}
+
 
 
 

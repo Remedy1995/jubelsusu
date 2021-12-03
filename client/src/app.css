@@ -352,9 +352,9 @@ span.name-caret {
 @media (max-width:736px){
 .form-control3{
     position: relative;
-    top: -50px;
-    left: 14px;
-    width: 306px;
+    top: 0px;
+    left: 34px;
+    width: 280px;
 }
 
 }
@@ -415,7 +415,7 @@ span.name-caret {
 }
 
 @media (max-width:736px){
-    .file, .trans {
+    th.trans {
         position: relative;
         left: -140px;
         font-size: 11px;
@@ -423,13 +423,14 @@ span.name-caret {
 
 }
 @media (max-width:736px){
-.file{
+span.file{
+    position: relative;
     left: 10px;
 }
 }
 
 @media (max-width:736px){
-span.FullName {
+.FullName {
         position: relative;
         left: 40px;
     }
@@ -439,9 +440,9 @@ span.FullName {
 @media (max-width:736px){
 input#fullname.searchfullname {
     position: relative;
-    left: 30px;
+    left: 15px;
     top: 10px;
-    width: 280px;
+    width: 250px;
     border-radius: 12px;
     border: 3px solid #d0cdcd;
     height: 40px;
@@ -579,11 +580,11 @@ color: white;
 }
 .trans{
     position: relative;
-    left: -50px;
+    left: 90px;
 }
 .file{
     position: relative;
-    left: 65px;
+    left:65px;
 }
 
 .da{
@@ -937,12 +938,39 @@ div.content-main {
     border: 1px solid #e0e0e0;
 }
 }
-#fullname{
-    position: relative;
-    left: 700px;
-    top: -50px;
-    width: 300px;
-}
+
+    #fullname {
+        position: relative;
+        left: 70px;
+        top: 50px;
+        width: 300px;
+    
+    }
+    @media(min-width:768px) {
+        #fullname {
+            position: relative;
+            left: 0px;
+            top: 0px;
+            width: 300px;
+        }
+    }
+
+    @media (max-width:736px){
+        div.profile-bottom {
+            width: 95%;
+            margin: 0em auto;
+            background-color: rgb(253 255 255);
+            padding: 1em 0;
+            border: 1px solid #ebeff6;
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -o-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+        }
+        }
+        
 
 .FullName{
     position: relative;
