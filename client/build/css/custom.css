@@ -389,8 +389,14 @@ p#jubel {
     }
 }
 
-
-
+@media (max-width: 736px) {
+img.card-img-top {
+    height: 200px;
+    margin-top: -40px;
+    margin-left: 60px;
+    border-radius: 0;
+}
+}
 @media (max-width:736px){
     input#fullname.searchfullname {
         position: relative;
@@ -403,7 +409,14 @@ p#jubel {
     }
 }
 
-
+@media(min-width:768px) {
+    #fullname {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        width: 300px;
+    }
+}
 input#username1.form-control1{
     position: relative;
     top: -48px;
