@@ -11,7 +11,20 @@ ul, ol {margin: 0;padding: 0;}
 p {margin: 0;}
 
 
-
+input#fullname.form-control4{
+    position: relative;
+    left: 70px;
+    top: -9px;
+    width: 300px;
+}
+@media(max-width:768px){
+    input#fullname.form-control4{
+        position: relative;
+        left: 0px;
+        top: 0px;
+        width: 300px;
+    }
+}
 
 #main {
     transition: margin-left .5s; /* If you want a transition effect */
@@ -433,7 +446,7 @@ input#accountnumber.accoun {
 .form-control3{
     position: relative;
     top: 0px;
-    left: 34px;
+    left: 20px;
     width: 280px;
 }
 
