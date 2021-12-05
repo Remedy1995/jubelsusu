@@ -365,7 +365,7 @@ h4.welcome{
             height: 75px
          }
     }
-
+/* 
 
     @media (max-width:736px){
 
@@ -378,7 +378,7 @@ h4.welcome{
         }
 
 
-    }
+    } */
     @media (max-width:736px){
         .dropdown-at img {
             margin: 0 0em 0 1em;

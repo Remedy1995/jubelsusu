@@ -389,14 +389,14 @@ p#jubel {
     }
 }
 
-@media (max-width: 736px) {
+/* @media (max-width: 736px) {
 img.card-img-top {
     height: 200px;
     margin-top: -40px;
     margin-left: 60px;
     border-radius: 0;
 }
-}
+} */
 @media (max-width:736px){
     input#fullname.searchfullname {
         position: relative;
