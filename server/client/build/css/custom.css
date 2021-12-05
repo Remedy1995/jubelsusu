@@ -3980,9 +3980,9 @@ img{
 
 img{
     border-radius: 100px;
-     position: relative;
-     top: -80px;
-     left: -60px;
+    position: relative;
+    top: 50px;
+    left: 0px;
  
  }
 
