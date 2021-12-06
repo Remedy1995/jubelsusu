@@ -123,7 +123,7 @@ function Registercustomer(){
 	  formData.append("fileName", fileName);
 	  formData.append("password",password);
 	  const res=await axios.post(
-		  "https://jubelsusu.herokuapp.com/createuser/user",
+		  "http://jubelsusu.herokuapp.com/createuser/user",
 		  formData)
 		  console.log(res)
 	
@@ -220,7 +220,7 @@ return(
 									<span className="input-group-addon" id="checkin">
 										<i className="fa fa-envelope-o"></i>
 									</span>
-									<input style={{position:"relative",top:"40px",left:"-30px"}} type="text" className="form-control1" placeholder="User Name" id="username" onChange={saveUsername} name="username"/>
+									<input  type="text" className="form-control1" placeholder="User Name" id="username" onChange={saveUsername} name="username"/>
 								</div>
 							</div>
 						</div>

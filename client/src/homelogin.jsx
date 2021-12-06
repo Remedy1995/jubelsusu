@@ -96,7 +96,7 @@ function HomeLogin(){
 					<p>Login As an Agent?</p>
 					<Switch><React.Fragment><Link to="/agentlogin" className="hvr-shutter-in-horizontal">Agent Login</Link></React.Fragment></Switch>
 			</div>
-			<Link to="/customerlogin" style={{textDecoration:"none"}} className="loginas">Login as a user?Click here</Link>
+			<Link to="/customerlogin"  className="loginas">Login as a user?Click here</Link>
 			<div className="clearfix"> </div>
 			</form>
 		</div>

@@ -3972,6 +3972,20 @@ ul.dropdown-menu.dropdown-menu-right {
 
 
 }
+
+@media (max-width: 768px){
+input#username1.form-control1 {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    width: 220px;
+    border: 2px solid #e1f4bc;
+    border-radius: 8px;
+}
+}
+
+
+
 img{
     
 }

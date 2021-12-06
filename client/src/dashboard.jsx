@@ -91,7 +91,7 @@ return(
 			<div className="col-md-4 ">
 				<div className="content-top-1">
 				<div className="col-md-6 top-content">
-					<h5>All Customers</h5>
+					<h5> Customers</h5>
 					<label style={{color:"white"}}>{totalcustomer}</label>
 				</div>
 				<div className="col-md-6 top-content1">	   
@@ -101,7 +101,7 @@ return(
 				</div>
 				<div className="content-top-2">
 				<div className="col-md-6 top-content">
-					<h5  >Total Deposits</h5>
+					<h5  > Deposits</h5>
 					<label style={{color:"white"}} >GHC{totaldep}</label>
 				</div>
 				<div className="col-md-6 top-content1">	   

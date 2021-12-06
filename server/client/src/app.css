@@ -1351,11 +1351,20 @@ i.fa.fa-globe {
     position: relative;
     left: -250px;
     top: 20px;
+    
 }
 .pro{
     width: 150px;
     margin-left: 10px;
 }
+
+@media (max-width: 738px){
+ .loginas {
+    text-decoration: none;
+    left: 25px;
+    top: 20px;
+} 
+} 
 
 .content-top-3{
     background-color:#217e93;
@@ -3947,7 +3956,9 @@ ul.dropdown-menu.dropdown-menu-right {
     font-size: 0.8em;
 }
 .top-content label {
-    font-size: 1.6em;
+    font-size: 1.7em;
+
+    margin-left: 50px
 }
 }
 
