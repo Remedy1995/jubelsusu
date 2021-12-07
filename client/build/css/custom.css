@@ -650,7 +650,7 @@ div#wrapper {
 div.content-top-2 {
     background-color: #a03a3a;
     position: relative;
-    top: -193px;
+    top: -170px;
     left: 370px;
 }
 
@@ -718,7 +718,7 @@ label{
     position: relative;
     top: -383px;
     left: 740px;
-    height: 173px;
+    height: 151px;
 } 
 input#username.form-control1{
         position: relative;
