@@ -109,9 +109,9 @@ function Customerbalance(){
     <label className="col-md-2 control-label" id="lab"></label>
     <div className="col-md-8">
       <div className="input-group" style={{height:"10px"}}>							
-        <input type="text" className="form-control1" placeholder=" Search Account number" id="accountnumber" name="accountnumber" onChange={userHandler} />
+        <input type="text" className="form-control3" placeholder=" Search Account number" id="accountnumber" name="accountnumber" onChange={userHandler} />
         </div>
-        <div style={{color:"red",position:"relative",top: "-155px",left:"121px"}}>{useErr?<span>username should be 5 or more characters</span>:null}</div>
+        <div className="errorm">{useErr?<span>username should be 5 or more characters</span>:null}</div>
       </div>
   
       </div>

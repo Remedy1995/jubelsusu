@@ -157,9 +157,9 @@ return(
 									<span className="input-group-addon" id="checkin">
 										<i className="fa fa-envelope-o"></i>
 									</span>
-									<input  style={{position:"relative",top:"40px",left:"-30px"}} type="text" className="form-control1" placeholder="User Name" id="username" onChange={userHandler}/>
+									<input  type="text" className="form-control1" placeholder="User Name" id="username" onChange={userHandler}/>
 								</div>
-								<div style={{color:"red",position:"relative",top:"30px"}}>{useErr?"username should be more than 5 letters":null}</div>
+								<div className="errorm">{useErr?"username should be more than 5 letters":null}</div>
 							</div>
 						</div>
                         <div className="form-group">
@@ -171,7 +171,7 @@ return(
 									</span>
 									<input type="text" className="form-control1" placeholder="First Name" id="firstname" name="firstname" onChange={firstHandler}/>
 								</div>
-								<div style={{color:"red",position:"relative",top:"30px"}}>{firstErr?"firstname should be more than 5 letters":null}</div>
+								<div className="errorm">{firstErr?"firstname should be more than 5 letters":null}</div>
 							</div>
 						</div>
 						<div className="form-group">
@@ -183,7 +183,7 @@ return(
 									</span>
 									<input type="text"  className="form-control1"   id="lastname" placeholder="Lastname" name="lastname" onChange={accHandler}/>
 								</div>
-								<div style={{color:"red",position:"relative",top:"30px"}}>{accErr?"Enter Amount":null}</div>
+								<div className="errorm">{accErr?"Enter Amount":null}</div>
 							</div>
 							
 						</div>
@@ -196,7 +196,7 @@ return(
 									</span>
 									<input type="email"  className="form-control1"  id="email" placeholder="email" onChange={dateHandler} />
 								</div>
-								<div style={{color:"red",position:"relative",top:"30px"}}>{datErr?"input email address":null}</div>
+								<div className="errorm">{datErr?"input email address":null}</div>
 							</div>
 							
 						</div>
@@ -209,7 +209,7 @@ return(
 									</span>
 									<input type="number"  className="form-control1"  id="phone" placeholder="phone" onChange={dateHandler} />
 								</div>
-								<div style={{color:"red",position:"relative",top:"30px"}}>{datErr?"input phone":null}</div>
+								<div className="errorm">{datErr?"input phone":null}</div>
 							</div>
 							
 						</div>
@@ -223,7 +223,7 @@ return(
 									</span>
 									<input type="date"  className="form-control1"  id="date" onChange={dateHandler} />
 								</div>
-								<div style={{color:"red",position:"relative",top:"30px"}}>{datErr?"Select date":null}</div>
+								<div className="errorm">{datErr?"Select date":null}</div>
 							</div>
 							
 						</div>

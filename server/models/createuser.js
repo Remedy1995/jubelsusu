@@ -10,7 +10,9 @@ const CreateUserSchema={
     password:String,
     file:String,
     accountnumber:String,
-    file1:String
+    file1:String,
+    file_url:String,
+    file1_url:String
 }
 const CreateUser=mongoose.model("createuser",CreateUserSchema);
 module.exports=CreateUser;

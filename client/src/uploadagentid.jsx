@@ -80,11 +80,11 @@ return(
 					<form  className="form-horizontal" >
 
                     			<div className="form-group">
-					<label className="col-md-2 control-label" id="lab">Upload ID Card</label>
+					<label className="col-md-2 control-label" id="lab"></label>
 							<div className="col-md-8">
 								<div className="input-group">							
 							
-									<input type="file"  style={{position: "relative",left:"-200px"}}onChange={saveFile} name="file" className="saveFile"/>
+									<input type="file"  id="uploadid" onChange={saveFile} name="file" className="saveFile"/>
 								</div>
 							</div>
 						</div>

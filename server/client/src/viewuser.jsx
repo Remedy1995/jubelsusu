@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React,{useState}  from "react";
 import './app.css';
 import Sidebar from "./sidebar";
@@ -37,18 +38,11 @@ function ViewUser(){
   var email=!data?"":data.email;
   var phone=!data?"":data.phone;
   var image=!data?"":data.file;
-  var imglink=!data?"":data.file;
-  var imglink1=!data?"":data.file1;
-
-
-
-
-
-
-
-
-
-
+  var downloadlink=!data?"":data.file_url;
+  var downloadlink1=!data?"":data.file1_url;
+//   var string1=imglink.slice(0, 50)+"fl_attachment/";
+ 
+//   var n=str.slice(5);
 return(
 	<div>
 
@@ -83,7 +77,10 @@ return(
 			<h3><i className="fa fa-user"></i>Profile</h3>
 			<div className="profile-bottom-top">
 			<div className="col-md-4 profile-bottom-img">
+		
+			<a href={downloadlink} target="_blank" rel="noopener noreferrer" download>
 				<img src={image} className="pro" alt=""/>
+				</a>
 			</div>
 			<div className="col-md-8 profile-text">
 				<h6>{firstname} {lastname}</h6>
@@ -114,15 +111,15 @@ return(
 			<div className="profile-bottom-bottom">
 			<div className="col-md-4 profile-fo">
 			
-			<Switch><React.Fragment><Link to={imglink1} color="transparent"
+			<Switch><React.Fragment><a href={downloadlink1} color="transparent"
       target="_blank"
-      download>Download ID Card</Link></React.Fragment></Switch>
+      download>Download ID Card</a></React.Fragment></Switch>
 			</div>
 			<div className="col-md-4 profile-fo">
 				
-			<Switch><React.Fragment><Link to={imglink} color="transparent"
+			<Switch><React.Fragment><a href={downloadlink} color="transparent"
       target="_blank"
-      download>Download Image</Link></React.Fragment></Switch>
+      download>Download Image</a></React.Fragment></Switch>
 			</div>
 			
 			<div className="clearfix"></div>

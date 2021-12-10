@@ -142,7 +142,7 @@ return (
     </div>
             <table className="table">
   <thead>
-    <tr className="details">
+    <tr className="details3">
       
       <th  className="adminfirstname">Firstname</th>
       <th className="adminlastname" >Lastname</th>
@@ -156,19 +156,19 @@ return (
   <tbody >
     
     
-  {!data1?"":data1.map(num=>(<tr key={num._id} style={{background:"burlywood"}}><td key={num._id} className="smallinfo">{num.firstname}</td><td key={num.id} className="smallinfo">{num.lastname}</td><td key={num.id} className="smallinfo">{num.username}</td><td key={num.id} className="smallinfo"><button className="btn-primary btn" id="btn-c" ><Switch><React.Fragment><Link  className=" hvr-bounce-to-right"  to={{
+  {!data1?"":data1.map(num=>(<tr key={num._id} style={{background:"burlywood"}}><td key={num._id} className="smallinfo">{num.firstname}</td><td key={num.id} className="smallinfo">{num.lastname}</td><td key={num.id} className="smallinfo">{num.username}</td><td key={num.id} className="smallinfo"><button className="btn-primary btn" id="btn-b" ><Switch><React.Fragment><Link  className=" hvr-bounce-to-right"  to={{
                     pathname: `/agentedit${num._id}`,
                     state: num
-                }}><i>Edit</i></Link></React.Fragment></Switch></button></td><td key={num.id}> <button className="btn-primary btn" id="btn-c" ><Switch><React.Fragment><Link  className=" hvr-bounce-to-right"  to={{
+                }}><i>Edit</i></Link></React.Fragment></Switch></button></td><td key={num.id}> <button className="btn-primary btn" id="btn-b" ><Switch><React.Fragment><Link  className=" hvr-bounce-to-right"  to={{
                   pathname: `/agentview${num._id}`,
                   state: num
               }}><i>View</i></Link></React.Fragment></Switch></button></td>
-                <td key={num.id}> <button className="btn-primary btn" id="btn-c" onClick={check} ><Switch><React.Fragment><Link  className=" hvr-bounce-to-right"  to={{
+                <td key={num.id}> <button className="btn-primary btn" id="btn-b" onClick={check} ><Switch><React.Fragment><Link  className=" hvr-bounce-to-right"  to={{
                     pathname: `/agentdelete${num._id}`,
                     state: num
                 }}><i>Delete</i></Link></React.Fragment></Switch></button>
          
-                </td> <td key={num.id}> <button className="btn-primary btn" id="btn-c"><Switch><React.Fragment><Link  className=" hvr-bounce-to-right"  to={{
+                </td> <td key={num.id}> <button className="btn-primary btn" id="btn-b"><Switch><React.Fragment><Link  className=" hvr-bounce-to-right"  to={{
                     pathname: `/uploadagentid${num._id}`,
                     state: num
                 }}><i>Upload ID</i></Link></React.Fragment></Switch></button>

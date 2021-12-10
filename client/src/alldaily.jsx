@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 
 import React,{useState}  from "react";
 import './app.css';
@@ -110,10 +111,10 @@ return (
      
    {!data1 ? "" : data1.map(num=>(<tr style={{background:"burlywood"}} className="table-data"><td>{num.date}</td><td>{num.lastname}</td><td>
      
-   <Switch><React.Fragment><Link to={num.image} color="transparent"
+   <Switch><React.Fragment><a href={num.image1} color="transparent"
       target="_blank"
       download><img src={num.image} height="50" width="50" alt=""></img>
-      </Link></React.Fragment></Switch>
+      </a></React.Fragment></Switch>
      </td>
    <td>
    {num.fullname}</td>
@@ -122,10 +123,10 @@ return (
 
  } </td></td></tr>))}
      
-     {!data ? "Loading..." : data.map(num=>(<tr  className="table-data"><td>{num.date}</td><td>{num.lastname}</td><td> <Switch><React.Fragment><Link to={num.image} color="transparent"
+     {!data ? "Loading..." : data.map(num=>(<tr  className="table-data"><td>{num.date}</td><td>{num.lastname}</td><td> <Switch><React.Fragment><a href={num.image1} color="transparent"
       target="_blank"
       download><img src={num.image} height="50" width="50" alt="" id="dailyimage"></img>
-      </Link></React.Fragment></Switch></td>
+      </a></React.Fragment></Switch></td>
    <td>
    {num.fullname}</td>
                 <td>  <td>

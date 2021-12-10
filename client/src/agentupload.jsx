@@ -9,12 +9,6 @@ import AgentSidebar from "./agentsidebar";
 import { useMediaQuery } from 'react-responsive'
 function AgentDailyTransactions(){
 
-  const stylefirstname={
-    width: 400,
-    position: "relative",
-    top: -5,
-    left: 150
-  }
   const [file, setFile] = useState();
   const [fileName, setFileName] = useState("");
   const [fullname,setFullname]=useState("");
@@ -88,7 +82,7 @@ return(
               <div className="col-md-8">
 								<div className="input-group">
 								
-									<input type="text" className="form-control1" id="fullname" name="fullname" placeholder="fullname" onChange={saveFullname} style={stylefirstname} />
+									<input type="text" className="form-control4" id="fullname" name="fullname" placeholder="fullname" onChange={saveFullname}  />
 								</div>
 							</div>
             <input type="file" onChange={saveFile} name="file" className="saveFile"/>

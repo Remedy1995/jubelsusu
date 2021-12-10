@@ -1,26 +1,14 @@
 const express=require('express');
 const router=express.Router();
-const path=require('path');
-const multer=require("multer");
 const CreateAgent=require('../models/createsusuagents');//models to create a user
-const countcustomer=require('../models/count/countcustomers');
 const md5=require('md5');
+const cloudinary=require('cloudinary').v2;
+const upload=require('../middleware/multer');
+const config=require('../config/config');
 const bodyparser = require('body-parser');
 router.use(bodyparser.urlencoded({extended:false}));
 router.use(bodyparser.json());
-var storage = multer.diskStorage({
-    destination: (req, file, callBack) => {
-        callBack(null, './client/public/images/')     // './public/images/' directory name where save the file
-    },
-    filename: (req, file, callBack) => {
-        callBack(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
-    }
-})
- 
-var upload = multer({
-    storage: storage
-});
- 
+
 
 router.post('/createagent', upload.single('file'),async function(req,res){
    
@@ -30,6 +18,31 @@ router.post('/createagent', upload.single('file'),async function(req,res){
         res.status(400).json({error: 'Please select file' })
     }
 else{
+
+    config();//configuration of the cloudinary apis
+    
+
+    var imgsrc = 'client/public/images/' + req.file.filename
+    console.log(imgsrc)
+    cloudinary.uploader.upload(imgsrc,
+      { public_id:  req.file.filename }, 
+      function(error, result) {
+          try{
+          console.log(result.secure_url);
+          console.log(result);
+          //create a download url for the image 
+          var image_version=result.version;
+          var public_id=result.public_id;
+          image_version="fl_attachment/";
+          var format=result.format;
+          var download_url ='https://res.cloudinary.com/dtcdazdpk/image/upload/'+image_version+public_id+"."+format;
+    console.log(download_url)
+      var final_file=result.secure_url;
+          }
+          catch(err){
+              console.log("please you have to set your time and date");
+              res.status(400).json({error: 'please you have to set your time and date'})
+          }
     var imgsrc = '/images/' + req.file.filename
    const firstname=req.body.firstname;
    const lastname=req.body.lastname;
@@ -42,7 +55,7 @@ else{
    console.log(firstname)
    console.log(lastname);
     
-    const createuser= await new CreateAgent(
+    const createuser= new CreateAgent(
         {
              firstname:firstname,
              lastname:lastname,
@@ -51,7 +64,8 @@ else{
              phone:phone,
              date:date,
              password:password,
-             file:file
+             file:final_file,
+             file_url:download_url
         }
     )
    const submit= createuser.save();
@@ -62,6 +76,8 @@ else{
    else{
        console.log("error occured in creating the agent");
    }
+})
+
 }
 })
 

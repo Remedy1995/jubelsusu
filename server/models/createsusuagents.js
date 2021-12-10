@@ -8,7 +8,9 @@ const CreateAgentSchema={
     date:String,
     password:String,
     file:String,
-    file1:String
+    file1:String,
+    file_url:String,
+    file1_url:String
 }
 const CreateAgent=mongoose.model("createagent",CreateAgentSchema);
 module.exports=CreateAgent;

@@ -48,7 +48,7 @@ function DailyTransactions(){
         console.log(res)
       
     }
-    e.target.reset()
+    
   }
 return(
 	<div>

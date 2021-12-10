@@ -1,14 +1,14 @@
+/* eslint-disable jsx-a11y/no-distracting-elements */
 import React,{useState}  from "react";
 import './app.css';
 import Sidebar from "./sidebar";
 import {Link,Switch} from 'react-router-dom';
 import swal from "sweetalert";
 import axios from "axios";
-import {useHistory} from 'react-router-dom';
 import AdminHeader from "./adminheader";
 import { useMediaQuery } from 'react-responsive'
 function Registercustomer(){
-	let history=useHistory();
+	
 	const [file, setFile] = useState();
 	const [fileName, setFileName] = useState("");
 	const [firstname, setFirstname] = useState("");
@@ -76,7 +76,7 @@ function Registercustomer(){
 	};
   
 	const uploadFile = async (e) => {
-	
+
 	  if(fileName===""){
 		swal("Upload!", "Please upload your file", "success");
 		
@@ -107,9 +107,9 @@ function Registercustomer(){
 		swal("Upload!", "Please enter your phone number", "success"); 
 	  }
 	  else{
-		setFirstname("");
+		
 		swal("Upload!", "You have successfully registered a customer", "success").then(function() {
-			history.push("/register")
+
 		});
 	  const formData = new FormData();
 	  formData.append("file", file);
@@ -123,7 +123,7 @@ function Registercustomer(){
 	  formData.append("fileName", fileName);
 	  formData.append("password",password);
 	  const res=await axios.post(
-		  "http://jubelsusu.herokuapp.com/createuser/user",
+		  "https://jubelsusu.herokuapp.com/createuser/user",
 		  formData)
 		  console.log(res)
 	
@@ -161,7 +161,7 @@ return(
 				<h2>
 				<Switch><React.Fragment><Link to="/dashboard">Home</Link></React.Fragment></Switch>
 				<i className="fa fa-angle-right"></i>
-				<span>Create New Customer Account</span>
+				<span>Create New Customer Account</span><marquee>make sure your time and date is up to date before you register </marquee>
 				</h2>
 		    </div>
 		

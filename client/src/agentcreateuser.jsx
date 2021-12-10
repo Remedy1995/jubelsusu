@@ -219,7 +219,7 @@ return(
 									<span className="input-group-addon" id="checkin">
 										<i className="fa fa-envelope-o"></i>
 									</span>
-									<input style={{position:"relative",top:"40px",left:"-30px"}} type="text" className="form-control1" placeholder="User Name" id="username" onChange={saveUsername} name="username"/>
+									<input type="text" className="form-control1" placeholder="User Name" id="username" onChange={saveUsername} name="username"/>
 								</div>
 							</div>
 						</div>
