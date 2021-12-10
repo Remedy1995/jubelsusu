@@ -23,12 +23,12 @@ function  Header(){
                <div>
                <nav className="navbar-default navbar-static-top" role="navigation" style={{background: "rgb(212 215 85 / 70%)"}}>
              <div className="navbar-header">
-                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                {/* <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span className="sr-only">Toggle navigation</span>
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
-                </button>
+                </button> */}
                <h1> <p id="jubel">{Webname}</p></h1>         
 			   </div>
 			 <div className=" border-bottom">

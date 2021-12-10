@@ -61,7 +61,7 @@ return(
 	<div>
 
 
- <Header/><button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample" style={{background:"black"}} onClick={OpenSidebar} >
+ <Header/><button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample"  onClick={OpenSidebar} >
                     <span className="sr-only" style={{color:"yellowgreen"}}>Toggle navigation</span>
                     <span className="icon-bar" ></span>
                     <span className="icon-bar"></span>

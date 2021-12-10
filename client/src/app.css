@@ -298,6 +298,21 @@ div#wrapper {
   font-weight: bold;
   color: #000;
 }
+
+@media (max-width: 738px){
+.profile-text h6 {
+    font-size: 1.8em;
+    color: #b642f3;
+    padding: 1em 1.4em 1.3em;
+    position: relative;
+    top: 30px;
+}
+}
+
+
+
+
+
 .navbar .navbar-nav li .dropdown-menu li a small {
   display: block;
   line-height: 12px;
@@ -449,10 +464,12 @@ h4.welcome{
     } */
     @media (max-width:736px){
         .dropdown-at img {
-            margin: 0 0em 0 1em;
+            margin: 0 0 0 1em;
             position: relative;
-            left: -40px;
-            width: 55px
+            left: -30px;
+            width: 60px;
+            top: -65px;
+            border-radius: 80%;
         }
 
 
@@ -604,7 +621,7 @@ input#accountnumber.accoun {
 @media (max-width:736px){
     th.trans {
         position: relative;
-        left: -195px;
+        left: -255px;
         font-size: 11px;
     }
 
@@ -1123,7 +1140,11 @@ div.content-main {
     background-size: cover;
     
 }
-
+@media (max-width: 736px){
+    div.content-main{
+        position: sticky;
+    }
+}
 
 
 
@@ -1242,6 +1263,7 @@ nav.navbar.navbar-static-top {
 }
 .dropdown-at img{
 	    margin: 0 0em 0 1em;
+        border-radius: 100px;
 }
 i.fa.fa-globe {
     font-size: 1.8em;
@@ -2544,7 +2566,7 @@ label.control-label {
 	padding:1em;
 }
 .profile-bottom{
-	width: 55%;
+	width: 75%;
 	margin: 0em auto;
 	    background-color: rgb(253 255 255);
     padding: 1em 0 ;
@@ -3612,6 +3634,26 @@ ul.new {
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #fff;
 }
+
+
+@media (max-width: 736px){
+span.icon-bar {
+    background-color: white;
+    position: relative;
+    left: -5px;
+}
+}
+
+@media (max-width: 736px){
+    button.navbar-toggle{
+        border-color: rgb(26, 188, 156);
+        background: rgb(26, 188, 156);
+        margin-right: 16px;
+        margin-top: 13px;
+    }
+    }
+    
+
 
 form.navbar-form.navbar-right {
   margin: 0;

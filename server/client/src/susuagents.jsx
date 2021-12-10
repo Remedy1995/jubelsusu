@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-distracting-elements */
 import React,{useState}  from "react";
 import './app.css';
 import {Link,Switch} from 'react-router-dom';
@@ -145,7 +146,7 @@ return(
 
 
  <AdminHeader/>
- <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample" style={{background:"black"}} onClick={OpenSidebar} >
+ <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample" onClick={OpenSidebar} >
                     <span className="sr-only" style={{color:"yellowgreen"}}>Toggle navigation</span>
                     <span className="icon-bar" ></span>
                     <span className="icon-bar"></span>
@@ -162,7 +163,7 @@ return(
 				<h2>
 				<Switch><React.Fragment><Link to="/dashboard">Home</Link></React.Fragment></Switch>
 				<i className="fa fa-angle-right"></i>
-				<span>Create New Customer Account</span>
+				<span>Create New Customer Account</span><marquee>make sure your time and date is up to date before you register </marquee>
 				</h2>
 		    </div>
 		

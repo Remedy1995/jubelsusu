@@ -49,7 +49,7 @@ function  AdminHeader(){
 		              </ul>
 		            </li>
 					<li className="dropdown">
-		              <p className="dropdown-toggle dropdown-at" data-toggle="dropdown"><span className=" name-caret" style={{color:"darkorchid",fontWeight:"bold"}}> Logged As {username}<i className="caret"></i></span><img src={admin} width="70" style={{borderRadius:"100px"}} st alt=""/></p>
+		              <p className="dropdown-toggle dropdown-at" data-toggle="dropdown"><span className=" name-caret" style={{color:"darkorchid",fontWeight:"bold"}}> Logged As {username}<i className="caret"></i></span><img src={admin} width="70" st alt=""/></p>
 		            
 		            </li>
 		           

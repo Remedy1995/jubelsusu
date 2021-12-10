@@ -43,7 +43,7 @@ return(
 <div id="wrapper">
 
  <Header/>
- <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample" style={{background:"black"}} onClick={OpenSidebar} >
+ <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#collapseExample"  onClick={OpenSidebar} >
                     <span className="sr-only" style={{color:"yellowgreen"}}>Toggle navigation</span>
                     <span className="icon-bar" ></span>
                     <span className="icon-bar"></span>
@@ -70,7 +70,7 @@ return(
 			<div className="col-md-4 ">
 				<div className="content-top-1">
 				<div className="col-md-6 top-content">
-					<h5>All Customers</h5>
+					<h5> Customers</h5>
 					<label style={{color:"white"}}>{totalcustomer}</label>
 				</div>
 				<div className="col-md-6 top-content1">	   
@@ -80,7 +80,7 @@ return(
 				</div>
 				<div className="content-top-2">
 				<div className="col-md-6 top-content">
-					<h5  >Total Deposits</h5>
+					<h5  > Deposits</h5>
 					<label style={{color:"white"}} >GHC{totaldeposit}</label>
 				</div>
 				<div className="col-md-6 top-content1">	   
@@ -91,7 +91,7 @@ return(
 				<div className="content-top-3">
 				<div className="col-md-6 top-content">
 					<h5>Commissions</h5>
-					<label style={{color:"white"}}>Not Yet</label>
+					<label style={{color:"white"}}></label>
 				</div>
 				<div className="col-md-6 top-content1">	   
 					<div id="demo-pie-3" className="pie-title-center" data-percent="75"> <span className="pie-value"></span> </div>
