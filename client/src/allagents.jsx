@@ -159,7 +159,7 @@ return (
   <tbody >
     
    
-  {!data1?"":data1.map(num=>(<tr key={num._id} style={{background:"burlywood"}}><td key={num._id} className="smallinfo">{num.firstname}</td><td key={num.id} className="smallinfo">{num.lastname}</td><td key={num.id} className="smallinfo">{num.username}</td><td key={num.id} className="smallinfo"><button className="btn-primary btn" id="btn-b" ><Switch><React.Fragment><Link  className=" hvr-bounce-to-right"  to={{
+  {!data1?"":data1.map(num=>(<tr key={num._id} style={{background:"burlywood"}}><td key={num._id} className="smallinfo1">{num.firstname}</td><td key={num.id} className="smallinfo1">{num.lastname}</td><td key={num.id} className="smallinfo">{num.username}</td><td key={num.id} className="smallinfo"><button className="btn-primary btn" id="btn-b" ><Switch><React.Fragment><Link  className=" hvr-bounce-to-right"  to={{
                     pathname: `/agentedit${num._id}`,
                     state: num
                 }}><i>Edit</i></Link></React.Fragment></Switch></button></td><td key={num.id}> <button className="btn-primary btn" id="btn-b" ><Switch><React.Fragment><Link  className=" hvr-bounce-to-right"  to={{
@@ -188,7 +188,7 @@ return (
     
     
     
-    {data?data.map(num=>(<tr key={num._id}><td key={num._id}>{num.firstname}</td><td key={num.id}>{num.lastname}</td><td key={num.id}>{num.username}</td><td key={num.id}><button className="btn-primary btn" id="btn-b" ><Switch><React.Fragment><Link  className=" hvr-bounce-to-right"  to={{
+    {data?data.map(num=>(<tr key={num._id}><td key={num._id} className="smallinfo1">{num.firstname}</td><td key={num.id} className="smallinfo1">{num.lastname}</td><td key={num.id}>{num.username}</td><td key={num.id}><button className="btn-primary btn" id="btn-b" ><Switch><React.Fragment><Link  className=" hvr-bounce-to-right"  to={{
                     pathname: `/agentedit${num._id}`,
                     state: num
                 }}><i>Edit</i></Link></React.Fragment></Switch></button></td><td key={num.id}> <button className="btn-primary btn" id="btn-b" ><Switch><React.Fragment><Link  className=" hvr-bounce-to-right"  to={{

@@ -85,7 +85,7 @@ return(
 									<input type="text" className="form-control4" id="fullname" name="fullname" placeholder="fullname" onChange={saveFullname}  />
 								</div>
 							</div>
-            <input type="file" onChange={saveFile} name="file" className="saveFile"/>
+            <input type="file" onChange={saveFile} name="file" className="saveFile" id="dailysave"/>
           <button  onClick={uploadFile} className="btn-primary btn" value="Upload  Daily Transactions" >Upload Daily Transactions</button>
           </form> 
 	</div>

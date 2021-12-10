@@ -4,6 +4,7 @@ const customtemplate=require('../countcustomertemplate');
 const countagentcustomer=require('../models/count/agentregistercustomers');
 const AddUser=require('../models/createuser');//models to create a user
 const bodyparser = require('body-parser');
+const md5=require('md5');
 const CountAgentCustomer = require('../models/count/agentregistercustomers');
 const cloudinary=require('cloudinary').v2;
 const upload=require('../middleware/multer');
@@ -58,7 +59,7 @@ console.log(imgsrc)
    const email=req.body.email;
    const phone=req.body.phone;
    const date=req.body.date;
-   const password=req.body.password;
+   const password=md5(req.body.password);
    const file=imgsrc;
    console.log(agentname)
    console.log(firstname)

@@ -327,6 +327,25 @@ div#wrapper {
 .navbar .navbar-nav li .dropdown-menu li.avatar a .label {
   top: 20px;
 }
+
+
+@media (max-width:736px){
+
+th.adminfirstname{
+display: none;
+}
+
+}
+
+@media (max-width:736px){
+
+    th.adminlastname{
+    display: none;
+    }
+    
+    }
+
+
 .navbar .navbar-nav li a .badge {
   background: #ff5454;
   border: 2px solid white;
@@ -381,8 +400,8 @@ span.name-caret {
     font-size: 11px;
     font-weight: bold;
     position: relative;
-    top: -50px;
-    left: -50px;
+    top: -20px;
+    left: -20px;
     float: right;
    
    }
@@ -758,7 +777,11 @@ width: 300px;
 padding-left: 40px;
 color: white;
 }
-
+@media(max-width:768px){
+td.smallinfo1{
+display: none;
+}
+}
 /* #accountnumber{
     position: relative;
     top: -60px;

@@ -71,7 +71,7 @@ return(
 				<div className="content-top-1">
 				<div className="col-md-6 top-content">
 					<h5> Customers</h5>
-					<label style={{color:"white"}}>{totalcustomer}</label>
+				<center>	<label style={{color:"white"}}>{totalcustomer}</label></center>
 				</div>
 				<div className="col-md-6 top-content1">	   
 					<div id="demo-pie-1" className="pie-title-center" data-percent="25"> <span className="pie-value"></span> </div>
@@ -81,7 +81,7 @@ return(
 				<div className="content-top-2">
 				<div className="col-md-6 top-content">
 					<h5  > Deposits</h5>
-					<label style={{color:"white"}} >GHC{totaldeposit}</label>
+				<center>	<label style={{color:"white"}} >GHC{totaldeposit}</label></center>
 				</div>
 				<div className="col-md-6 top-content1">	   
 					<div id="demo-pie-2" className="pie-title-center" data-percent="50"> <span className="pie-value"></span> </div>
