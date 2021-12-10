@@ -418,7 +418,12 @@ span.name-caret{
     font-weight: bold;
     
 }
+@media (max-width: 738px){
 
+    span.name-caret{
+display: none;
+    }
+}
 span.nav-label {
     position: relative;
     left: 30px;
