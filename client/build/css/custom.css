@@ -500,10 +500,10 @@ input#accountnumber.form-control1{
     border-radius: 8px;
 
 }
-input#file.saveFile{
+input#file.saveFile {
     position: relative;
-    top: -580px;
-    left: -320px;
+    top: -730px;
+    left: -360px;
 }
 @media (max-width: 738px){
     input#file.saveFile{
@@ -1205,8 +1205,8 @@ nav.navbar.navbar-static-top {
 
 div.imageupload {
     position: relative;
-    top: -555px;
-    left: 80px;
+    top: -705px;
+    left: 30px;
     font-size: 15px;
     opacity: .7;
 }
