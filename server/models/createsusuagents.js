@@ -6,6 +6,8 @@ const CreateAgentSchema={
      email:String,
     phone:String,
     date:String,
+    address:String,
+    occupation:String,
     password:String,
     file:String,
     file1:String,

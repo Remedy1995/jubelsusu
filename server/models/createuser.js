@@ -7,6 +7,8 @@ const CreateUserSchema={
      email:String,
     phone:String,
     date:String,
+    address:String,
+    occupation:String,
     password:String,
     file:String,
     accountnumber:String,

@@ -19,7 +19,8 @@ function Registercustomer(){
 	const [date,setDate]=useState("");
 	const [phone,setPhone] =useState("");
 	const [agentname,setAgentname]=useState("");
-
+    const [address,setAddress]=useState("");
+	const [occupation,setOccupation]=useState("");
 	const [show,setShow]=useState(true);
 	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 738px)' })
 
@@ -34,6 +35,10 @@ function Registercustomer(){
 	
 	  };
 	
+	  const saveAddress=(e)=>{
+		setAddress(e.target.value)
+	  }
+
 	  const saveLastname = (e) => {
 		setLastname(e.target.value);
 	
@@ -69,6 +74,10 @@ function Registercustomer(){
 		setUsername(e.target.value);
 	
 	  };
+
+	  const saveOccupation=(e)=>{
+		  setOccupation(e.target.value)
+	  }
 
 	const saveFile = (e) => {
 	  setFile(e.target.files[0]);
@@ -106,6 +115,13 @@ function Registercustomer(){
 	 else if(phone===""){
 		swal("Upload!", "Please enter your phone number", "success"); 
 	  }
+	  else if(address===""){
+		swal("Upload!", "Please enter your address ", "success"); 
+	  }
+	  else if(occupation===""){
+		swal("Upload!", "Please enter your occupation ", "success"); 
+	  }
+	  
 	  else{
 		
 		swal("Upload!", "You have successfully registered a customer", "success").then(function() {
@@ -120,6 +136,8 @@ function Registercustomer(){
 	  formData.append("date",date);
 	  formData.append("email",email);
 	  formData.append("phone",phone);
+	  formData.append("address",address);
+	  formData.append("occupation",occupation);
 	  formData.append("fileName", fileName);
 	  formData.append("password",password);
 	  const res=await axios.post(
@@ -248,7 +266,30 @@ return(
 							</div>
 							
 						</div>
-
+						<div className="form-group">
+							<label className="col-md-2 control-label" id="lab">Address</label>
+							<div className="col-md-8">
+								<div className="input-group input-icon right">
+									<span className="input-group-addon" id="checkin">
+										<i className="fa fa-key"></i>
+									</span>
+									<input type="text"  className="form-control1" id="address" placeholder="Address" name="address" onChange={saveAddress}/>
+								</div>
+							</div>
+							
+						</div>
+						<div className="form-group">
+							<label className="col-md-2 control-label" id="lab">Occupation</label>
+							<div className="col-md-8">
+								<div className="input-group input-icon right">
+									<span className="input-group-addon" id="checkin">
+										<i className="fa fa-key"></i>
+									</span>
+									<input type="text"  className="form-control1" id="occupation" placeholder="Occupation" name="occupation" onChange={saveOccupation}/>
+								</div>
+							</div>
+							
+						</div>
 						<div className="form-group">
 							<label className="col-md-2 control-label" id="lab">Password</label>
 							<div className="col-md-8">

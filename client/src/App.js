@@ -34,6 +34,7 @@ import AgentEditDetails from './agentedit.jsx';
 import UploadAgentId from './uploadagentid.jsx';
 import UserUploadId from './useruploadid.jsx';
 import AgentCreateUser from './agentcreateuser.jsx';
+import ResetUserPassword from './resetuserpassword.jsx';
 function App(){
 //    const [data,setdata]=useState(null);
  
@@ -198,8 +199,12 @@ return(
    <Route path="/uploadagentid:id">
 <UploadAgentId/>
    </Route>
+
+  <Route path="/resetuserpassword">
+<ResetUserPassword/>
+   </Route>
    </Switch>
-   
+ 
  </BrowserRouter>
 
 

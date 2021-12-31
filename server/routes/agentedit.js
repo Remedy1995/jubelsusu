@@ -20,9 +20,11 @@ router.post('/agentedit:id',function(req,res){
   var phone=req.body.phone;
   var date=req.body.date;
     var id=req.params.id;
+    var address=req.body.address;
+    var occupation=req.body.occupation;
 
     AgentUser.findByIdAndUpdate(id, { username:username,firstname:firstname,lastname:lastname,email:email,
-        phone:phone,date:date}, 
+        phone:phone,date:date,address:address,occupation:occupation}, 
         function (err, docs) {                          
 if (err){ 
 console.log(err) 

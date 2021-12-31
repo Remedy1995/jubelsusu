@@ -103,6 +103,11 @@ function Sidebar(){
             <li>
               <Switch><React.Fragment><Link className=" hvr-bounce-to-right"  to={{pathname: `/changeadminpassword${id}`,state: id}} ><FontAwesomeIcon icon={faKey}  className="fonta"/><span className="nav-label">Change Admin Password</span></Link>
           </React.Fragment></Switch></li>
+
+          		
+          <li>
+              <Switch><React.Fragment><Link className=" hvr-bounce-to-right"  to="/resetuserpassword" ><FontAwesomeIcon icon={faKey}  className="fonta"/><span className="nav-label">Reset User Password</span></Link>
+          </React.Fragment></Switch></li>
             <li><Switch><React.Fragment>
             <Link className=" hvr-bounce-to-right" to="/logout" onClick={logout} ><FontAwesomeIcon icon={faPowerOff}  className="fonta"/><span className="nav-label">Logout</span></Link>
           </React.Fragment>  </Switch></li>

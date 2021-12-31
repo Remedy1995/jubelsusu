@@ -59,6 +59,8 @@ console.log(imgsrc)
    const email=req.body.email;
    const phone=req.body.phone;
    const date=req.body.date;
+   const address=req.body.address;
+   const occupation=req.body.occupation;
    const password=md5(req.body.password);
    const file=imgsrc;
    console.log(agentname)
@@ -89,6 +91,8 @@ console.log(phone)
              email:email,
              phone:phone,
              date:date,
+             address:address,
+             occupation:occupation,
              password:password,
              file:final_file,
              accountnumber:accountnumber,

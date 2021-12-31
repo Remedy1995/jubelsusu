@@ -60,6 +60,7 @@ const countagentdeposit=require('../server/routes/countagentdeposit');
 const getimage=require('../server/routes/getimage');
 const userimage=require('../server/routes/userimage');
 const adminimage=require('../server/routes/adminimage');
+const resetuserpassword=require('../server/routes/resetuserpasword');
 app.set('trust proxy', 1);
 
 
@@ -139,7 +140,7 @@ app.use('/countagentdeposit',countagentdeposit);
 app.use('/getimage',getimage);
 app.use('/userimage',userimage);
 app.use('/adminimage',adminimage);
-
+app.use('/resetuserpassword',resetuserpassword);
 //connection to the database 
 // const mongodb='mongodb://127.0.0.1/susu';
 mongoose.connect(mongoDB,{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>
