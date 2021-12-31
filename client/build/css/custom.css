@@ -1202,6 +1202,17 @@ nav.navbar.navbar-static-top {
     font-size: 0.9em;   
 }
 
+@media (max-width: 360px){
+div#collapseExample.navbar-default.sidebar{
+    background-color: #9acd32;
+    height: 460px;
+    width: 247px;
+    float: left;
+    position: relative;
+    top: -20px;
+}
+}
+
 
 div.imageupload {
     position: relative;
