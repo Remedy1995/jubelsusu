@@ -13,7 +13,7 @@ import { useMediaQuery } from 'react-responsive'
 	const [withdrawal,totalwithdrawal]=useState(null);
 	const [commission,setcommission]=useState(null);
     
-	const isTabletOrMobile = useMediaQuery({ query: '(max-width: 738px)' })
+	// const isTabletOrMobile = useMediaQuery({ query: '(max-width: 738px)' })
 
 
 	React.useEffect( () => {
@@ -50,7 +50,7 @@ import { useMediaQuery } from 'react-responsive'
 	  React.useEffect( () => {
 		fetch("/gettotalwithdrawal/gettotalwithdrawal").then((res) => res.json()).then((withdrawal) => totalwithdrawal(withdrawal))}, []);
 		var totalwith=!withdrawal?"":withdrawal.map(num=>(num.total));
-		const [show,setShow]=useState(true);
+		const [show,setShow]=useState(false);
 		
 		function OpenSidebar(){
 			setShow(!show)
@@ -71,7 +71,7 @@ return(
 
 		{show?<Sidebar/>:null}
         
-      {show && isTabletOrMobile ?"" :<div id="page-wrapper" className="gray-bg dashbard-1">
+    <div id="page-wrapper" className="gray-bg dashbard-1">
        <div className="content-main" style={{background:"white"}}>
  
   			
@@ -82,12 +82,12 @@ return(
 				<i className="fa fa-angle-right"></i>
 				<span>Dashboard </span>
 				</h2>
-				<h4 className="commission">Commissions : GHC{totalcom}</h4>
+				<h4 className="commission">Commissions 65uuu6u: GHC{totalcom}</h4>
 		    </div>
 		
 		<div className="content-top">
 			
-		<h4 className="welcome" style={{color:"blueviolet",marginLeft:"20px",fontFamily:"system-ui"}}>Welcome!!! {username}</h4>
+		<h4 className="welcome" style={{color:"blueviolet",marginLeft:"20px",fontFamily:"system-ui"}}>Welcfdfome!!! {username}</h4>
 			<div className="col-md-4 ">
 				<div className="content-top-1">
 				<div className="col-md-6 top-content">
@@ -153,7 +153,7 @@ return(
 		</div>
 		<div className="clearfix"> </div>
        </div>
- }
+ 
      </div>
 
 </div>
