@@ -1,7 +1,7 @@
 const express = require("express");
 const PORT = process.env.PORT || 3001;
-const session=require("cookie-session");
-const MongoDbStore = require('connect-mongo');
+// const session=require("cookie-session");
+// const MongoDbStore = require('connect-mongo');
 const path=require('path');
 require('dotenv').config();
 const app = express();
@@ -32,7 +32,7 @@ const countallagentcustomers=require('./routes/countallagentcustomers');
 const agentlogin=require('./routes/agentlogin');
 const cookie=require("cookie-parser");
 const accountinfo=require('./routes/accountinformation')
-const mongoDB=process.env.MONGO_PASSWORD;
+// const mongoDB=process.env.MONGO_PASSWORD;
 const Getdeposit=require('../server/models/count/totaldeposit');
 const Getwithdrawal=require('../server/models/count/totalwithdrawal');
 const Getagentdeposit=require('../server/models/count/agenttotaldeposit');
@@ -62,7 +62,7 @@ const userimage=require('../server/routes/userimage');
 const adminimage=require('../server/routes/adminimage');
 const resetuserpassword=require('../server/routes/resetuserpasword');
 const mongodb='mongodb+srv://Remedy:Remedy1995@cluster0.swuc4.mongodb.net/susu';
-app.set('trust proxy', 1);
+// app.set('trust proxy', 1);
 
 
 // app.use(session({
@@ -76,19 +76,19 @@ app.set('trust proxy', 1);
   
 
 
-  app.use(function(req,res,next){
-    if(!req.session){
-      res.redirect("/")
-        return next(new Error('Oh no')) //handle error
+  // app.use(function(req,res,next){
+  //   if(!req.session){
+  //     res.redirect("/")
+  //       return next(new Error('Oh no')) //handle error
 
-    }
-    next() //otherwise continue
-    });
-
-
+  //   }
+  //   next() //otherwise continue
+  //   });
 
 
-app.use(cookie());
+
+
+// app.use(cookie());
 //routes for actions
 app.use('/createuser',createroute);//create a new user 
 app.use('/makedeposit',createdeposit);//make deposit
@@ -193,13 +193,13 @@ app.get("/api", (req, res) => {
   })
 
 
-app.get('/logout',function(req,res){
-  const username=req.session.username;
-  req.session = null;
-  res.json(username)
-console.log("logout success")
+// app.get('/logout',function(req,res){
+//   const username=req.session.username;
+//   req.session = null;
+//   res.json(username)
+// console.log("logout success")
   
-})
+// })
 
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
