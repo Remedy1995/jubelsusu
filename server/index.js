@@ -71,13 +71,13 @@ app.use(session({
         mongoUrl: mongoDB,
         touchAfter: 24 * 3600 
      }) }));
-  // app.use(function(req,res,next){
-  //   if(!req.session){
-  //     res.redirect("/")
-  //       return next(new Error('Oh no')) //handle error
-  //   }
-  //   next() //otherwise continue
-  //   });
+  app.use(function(req,res,next){
+    if(!req.session){
+      res.redirect("/")
+        return next(new Error('Oh no')) //handle error
+    }
+    next() //otherwise continue
+    });
 app.use(cookie());
 //routes for actions
 app.use('/createuser',createroute);//create a new user 
@@ -183,13 +183,13 @@ app.get("/api", (req, res) => {
   })
 
 
-// app.get('/logout',function(req,res){
-//   const username=req.session.username;
-//   req.session = null;
-//   res.json(username)
-// console.log("logout success")
+app.get('/logout',function(req,res){
+  const username=req.session.username;
+  req.session = null;
+  res.json(username)
+console.log("logout success")
   
-// })
+})
 
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
