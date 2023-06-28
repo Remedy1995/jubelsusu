@@ -61,6 +61,7 @@ const getimage=require('../server/routes/getimage');
 const userimage=require('../server/routes/userimage');
 const adminimage=require('../server/routes/adminimage');
 const resetuserpassword=require('../server/routes/resetuserpasword');
+const mongodb='mongodb+srv://Remedy:Remedy1995@cluster0.swuc4.mongodb.net/susu';
 app.set('trust proxy', 1);
 
 
@@ -142,7 +143,7 @@ app.use('/userimage',userimage);
 app.use('/adminimage',adminimage);
 app.use('/resetuserpassword',resetuserpassword);
 //connection to the database 
-const mongodb='mongodb+srv://Remedy:Remedy1995@cluster0.swuc4.mongodb.net/susu';
+
 mongoose.connect(mongoDB,{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>
 {
   console.log("successfully connected to the database");
