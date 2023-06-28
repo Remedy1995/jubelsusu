@@ -65,14 +65,14 @@ const mongodb='mongodb+srv://Remedy:Remedy1995@cluster0.swuc4.mongodb.net/susu';
 app.set('trust proxy', 1);
 
 
-app.use(session({
-    secret: 'thisismysecret',
-    resave: false,
-    saveUninitialized: false,
-    store:  MongoDbStore.create( {
-        mongoUrl: mongodb,
-        touchAfter: 24 * 3600 
-     }) }));
+// app.use(session({
+//     secret: 'thisismysecret',
+//     resave: false,
+//     saveUninitialized: false,
+//     store:  MongoDbStore.create( {
+//         mongoUrl: mongodb,
+//         touchAfter: 24 * 3600 
+//      }) }));
   
 
 
