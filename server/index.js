@@ -69,7 +69,7 @@ app.use(session({
     secret: 'thisismysecret',
     resave: false,
     saveUninitialized: false,
-    store: MongoStore.create( {
+    store:  MongoDbStore.create( {
         mongoUrl: mongodb,
         touchAfter: 24 * 3600 
      }) }));
