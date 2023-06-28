@@ -63,8 +63,6 @@ const adminimage=require('../server/routes/adminimage');
 const resetuserpassword=require('../server/routes/resetuserpasword');
 const mongodb='mongodb+srv://Remedy:Remedy1995@cluster0.swuc4.mongodb.net/susu';
 app.set('trust proxy', 1);
-
-
 app.use(session({
     secret: 'thisismysecret',
     resave: false,
@@ -73,21 +71,13 @@ app.use(session({
         mongoUrl: mongoDB,
         touchAfter: 24 * 3600 
      }) }));
-  
-
-
   app.use(function(req,res,next){
     if(!req.session){
       res.redirect("/")
         return next(new Error('Oh no')) //handle error
-
     }
     next() //otherwise continue
     });
-
-
-
-
 app.use(cookie());
 //routes for actions
 app.use('/createuser',createroute);//create a new user 
