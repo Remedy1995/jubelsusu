@@ -159,13 +159,13 @@ app.get("/api", (req, res) => {
     username=req.session.username;
     console.log("you are on the dashboard route")
     
-     if(username){
+     // if(username){
       res.sendFile(__dirname + '/client/build/index.html');
      
-    }
-    else{
-      res.redirect("/")
-    }
+    // }
+    // else{
+    //   res.redirect("/")
+    // }
     })
 
   app.get("/dashboard",(req,res)=>{
