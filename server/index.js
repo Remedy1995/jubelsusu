@@ -142,7 +142,7 @@ app.use('/userimage',userimage);
 app.use('/adminimage',adminimage);
 app.use('/resetuserpassword',resetuserpassword);
 //connection to the database 
-// const mongodb='mongodb://127.0.0.1/susu';
+// const mongodb='mongodb+srv://Remedy:Remedy1995@cluster0.swuc4.mongodb.net/susu';
 mongoose.connect(mongoDB,{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>
 {
   console.log("successfully connected to the database");
