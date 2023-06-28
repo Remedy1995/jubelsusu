@@ -66,18 +66,13 @@ app.set('trust proxy', 1);
 
 
 app.use(session({
-  cookie:{
-      secure: true,
-      maxAge:120000
-         },
-  secret: 'secret',
-  saveUninitialized: true,
-  resave: false,
-  store: MongoDbStore.create({
-    mongoUrl: mongoDB
-  
-  })
-  }));
+    secret: 'thisismysecret',
+    resave: false,
+    saveUninitialized: false,
+    store: MongoStore.create( {
+        mongoUrl: mongodb,
+        touchAfter: 24 * 3600 
+     }) }));
   
 
 
