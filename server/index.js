@@ -100,7 +100,8 @@ app.use('/countallagentcustomers',countallagentcustomers);
 app.use('/agentlogin',agentlogin);
 app.use('/accountinfo',accountinfo);
 app.use('/agentcreateuser',agentcreateuser);//the agent can create agent with this endpoint
-app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, 'public'))); 
+app.use(express.static(path.join(__dirname + '/public/build')));
 app.use('/agentdeposit',agentdeposit);
 app.use('/adminuser',adminuser);
 app.use('/changeadminpassword',changeadminpassword);
