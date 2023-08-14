@@ -63,13 +63,11 @@ const adminimage=require('../server/routes/adminimage');
 const resetuserpassword=require('../server/routes/resetuserpasword');
 const mongodb='mongodb+srv://Remedy:Remedy1995@cluster0.swuc4.mongodb.net/susu';
 app.set('trust proxy', 1);
-app.use(session(
-      {
-        secret: 'helloworld12345',
-        store: MongoStore.create({ 
-          mongoUrl: mongodb}),
-        
-      }));
+app.use(session({
+  resave: false, // don't save session if unmodified
+  saveUninitialized: false, // don't create session until something stored
+  secret: 'keyboard cat'
+}))
   app.use(function(req,res,next){
     if(!req.session){
       res.redirect("/")
