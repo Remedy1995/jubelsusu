@@ -10,7 +10,7 @@ async function WithdrawalController(req, res) {
         //if accountnumber has not made any deposits or savings
         if (docs.length < 1) {
             const dbError = new ErrorResponse(404, "Invalid Request", "Sorry account number does not exist");
-            return res.status(404).json(dbError.errorObject());
+            return res.status(404).json({error : 'Account not found'});
         } else {
             //if account number has savings first check if requested amount is higher than savings
              const searchAccount = docs.find((data)=>data.accountnumber === accountnumber);
