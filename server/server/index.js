@@ -61,20 +61,37 @@ const getimage=require('../server/routes/getimage');
 const userimage=require('../server/routes/userimage');
 const adminimage=require('../server/routes/adminimage');
 const resetuserpassword=require('../server/routes/resetuserpasword');
-const mongodb='mongodb+srv://Remedy:Remedy1995@cluster0.swuc4.mongodb.net/susu';
 app.set('trust proxy', 1);
+
+
 app.use(session({
-  resave: false, // don't save session if unmodified
-  saveUninitialized: false, // don't create session until something stored
-  secret: 'keyboard cat'
-}))
+  cookie:{
+      secure: true,
+      maxAge:120000
+         },
+  secret: 'secret',
+  saveUninitialized: true,
+  resave: false,
+  store: MongoDbStore.create({
+    mongoUrl: mongoDB
+  
+  })
+  }));
+  
+
+
   app.use(function(req,res,next){
     if(!req.session){
       res.redirect("/")
         return next(new Error('Oh no')) //handle error
+
     }
     next() //otherwise continue
     });
+
+
+
+
 app.use(cookie());
 //routes for actions
 app.use('/createuser',createroute);//create a new user 
@@ -97,8 +114,7 @@ app.use('/countallagentcustomers',countallagentcustomers);
 app.use('/agentlogin',agentlogin);
 app.use('/accountinfo',accountinfo);
 app.use('/agentcreateuser',agentcreateuser);//the agent can create agent with this endpoint
-app.use(express.static(path.join(__dirname, 'public'))); 
-app.use(express.static(path.join(__dirname + '/public/build')));
+app.use(express.static(path.join(__dirname, '../client/build')));
 app.use('/agentdeposit',agentdeposit);
 app.use('/adminuser',adminuser);
 app.use('/changeadminpassword',changeadminpassword);
@@ -126,7 +142,7 @@ app.use('/userimage',userimage);
 app.use('/adminimage',adminimage);
 app.use('/resetuserpassword',resetuserpassword);
 //connection to the database 
-
+// const mongodb='mongodb://127.0.0.1/susu';
 mongoose.connect(mongoDB,{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>
 {
   console.log("successfully connected to the database");
@@ -157,13 +173,13 @@ app.get("/api", (req, res) => {
     username=req.session.username;
     console.log("you are on the dashboard route")
     
-     // if(username){
+     if(username){
       res.sendFile(__dirname + '/client/build/index.html');
      
-    // }
-    // else{
-    //   res.redirect("/")
-    // }
+    }
+    else{
+      res.redirect("/")
+    }
     })
 
   app.get("/dashboard",(req,res)=>{
@@ -190,6 +206,6 @@ console.log("logout success")
 })
 
 app.listen(PORT, () => {
-  console.log(`Server is now on ${PORT}`);
+  console.log(`Server listening on ${PORT}`);
 });
 
