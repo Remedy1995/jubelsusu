@@ -65,10 +65,11 @@ router.post('/user', upload.single('file'), async function (req, res) {
         )
         const submit = adduser.save();
         if (submit) {
-            res.send("data has been submitted successfully");
+           res.status(201).json({ message : "User has been created Successfully default password has to be changed"})
             //update the count field in the database when a customer is registered
             customtemplate();//function for the recording of customers
 
+            
         }
         else {
             res.send("error in sending data");

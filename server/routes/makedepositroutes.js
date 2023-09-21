@@ -7,6 +7,6 @@ router.use(bodyparser.urlencoded({ extended: false }));
 router.use(bodyparser.json());
 
 
-router.post('/deposit', DepositorValidator, DepositController);
+router.post('/deposit', DepositorValidator.DepositValidator, DepositController);
 
 module.exports = router;
