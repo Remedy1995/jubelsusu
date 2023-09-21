@@ -59,7 +59,8 @@ router.post('/user', upload.single('file'), async function (req, res) {
                 password: password,
                 file: 'final_file',
                 accountnumber: accountnumber,
-                file_url: 'download_url'
+                file_url: 'download_url',
+                role:'customer'
             }
         )
         const submit = adduser.save();
@@ -142,7 +143,8 @@ router.post('/user', upload.single('file'), async function (req, res) {
                         password: password,
                         file: final_file,
                         accountnumber: accountnumber,
-                        file_url: download_url
+                        file_url: download_url,
+                        role:'customer'
                     }
                 )
                 const submit = adduser.save();
