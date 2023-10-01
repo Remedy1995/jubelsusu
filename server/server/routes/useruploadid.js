@@ -12,7 +12,7 @@ router.use(bodyparser.urlencoded({extended:false}));
 router.use(bodyparser.json());
 
 
-router.post('/useruploadid:id', upload.single('file'),async function(req,res){
+router.post('/useruploadid:id',async function(req,res){
     var id=req.params.id;
 
 

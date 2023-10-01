@@ -17,7 +17,7 @@ router.use(bodyParser.urlencoded({ extended: true }));
  
 //@type   POST
 //route for post data
-router.post("/upload", upload.single('file'), (req, res) => {
+router.post("/upload", (req, res) => {
     const fullname=req.body.fullname;
     console.log(fullname)
     if (!req.file) {

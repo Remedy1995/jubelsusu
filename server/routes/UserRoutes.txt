@@ -1,12 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const bodyparser = require('body-parser');
-const DepositController = require('../Controllers/DepositController');
-const DepositorValidator = require('../middleware/Validators');
+const Validator = require('../middleware/Validators');
+const UserImageUpload = require('../Controllers/User');
+
 router.use(bodyparser.urlencoded({ extended: false }));
 router.use(bodyparser.json());
 
 
-router.post('/deposit', DepositorValidator.DepositValidator, DepositController);
+router.post('/user-image-upload', UserImageUpload.UserImageUpload);
+
 
 module.exports = router;

@@ -10,7 +10,7 @@ router.use(bodyparser.urlencoded({extended:false}));
 router.use(bodyparser.json());
 
 
-router.post('/createagent', upload.single('file'),async function(req,res){
+router.post('/createagent',async function(req,res){
    
 
     if (!req.file) {

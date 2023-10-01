@@ -19,10 +19,10 @@ async function DepositController(req, res) {
                 const deposit = await depositAccount.save();
                 if (deposit) {
                     //record total deposits
-                      TotalDeposits(parseFloat(amount));
+                    TotalDeposits(parseFloat(amount));
                     //record the transaction in the transactions history
                     TransactionHistory(accountnumber, amount, " deposited ");
-                    return res.status(201).json({ message: "Deposit has been made successfully and your new balance is GHC" +amount.concat(".00"), new_balance: "GHC".concat(amount).concat(".00") });
+                    return res.status(201).json({ message: "Deposit has been made successfully and your new balance is GHC" + amount.concat(".00"), new_balance: "GHC".concat(amount).concat(".00") });
                 }
             } catch (error) {
                 console.error(error);
@@ -38,11 +38,11 @@ async function DepositController(req, res) {
             try {
                 const updatedDeposit = await Deposit.updateOne(query, data);
                 if (updatedDeposit.acknowledged) {
-                     //record total deposits
-                      TotalDeposits(parseFloat(amount));
+                    //record total deposits
+                    TotalDeposits(parseFloat(amount));
                     //record the transaction in the transactions history
                     TransactionHistory(accountnumber, amount, " deposited ");
-                    return res.status(201).json({ message: "Deposit has been made successfully and your new balance is GHC" +new_amount.toFixed(2), new_balance:  "GHC".concat(new_amount).concat(".00") });
+                    return res.status(201).json({ message: "Deposit has been made successfully and your new balance is GHC" + new_amount.toFixed(2), new_balance: "GHC".concat(new_amount).concat(".00") });
                 } else {
                     const dbError = new ErrorResponse(500, "Database Error", "There was an error processing your request");
                     return res.status(500).json(dbError.errorObject());

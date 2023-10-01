@@ -5,6 +5,8 @@ const bodyparser = require('body-parser');
 const session = require("express-session");
 const cookie = require("cookie-parser");
 const md5 = require('md5');
+const upload = require('../middleware/multer');
+const uploadMiddleware = require('../middleware/multer');
 const User = require('../Controllers/User');
 const LoginValidator = require('../middleware/Validators');
 const oneDay = 1000 * 60 * 60 * 24;
@@ -21,6 +23,9 @@ router.use(bodyparser.urlencoded({ extended: false }));
 router.use(bodyparser.json());
 
 router.post('/userlogin', LoginValidator.LoginValidator, User.UserLogin);
+router.post('/user-image-upload', uploadMiddleware(), User.UserImageUpload);
+
+router
 
 
 

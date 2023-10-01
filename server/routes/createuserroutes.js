@@ -12,8 +12,7 @@ router.use(bodyparser.urlencoded({ extended: false }));
 router.use(bodyparser.json());
 
 
-router.post('/user', upload.single('file'), async function (req, res) {
-
+router.post('/user', async function (req, res) {
 
     if (!req.file) {
         console.log("No file upload");
@@ -60,20 +59,29 @@ router.post('/user', upload.single('file'), async function (req, res) {
                 file: 'final_file',
                 accountnumber: accountnumber,
                 file_url: 'download_url',
-                role:'customer'
+                role: 'customer'
             }
         )
-        const submit = adduser.save();
-        if (submit) {
-           res.status(201).json({ message : "User has been created Successfully default password has to be changed"})
-            //update the count field in the database when a customer is registered
-            customtemplate();//function for the recording of customers
+        AddUser.findOne({$or: [{ username }, { phone }]}).then((data) => {
+            if (data) {
+                res.status(200).json({ message: "Sorry Username or phone already exists" })
+            }
+            else {
+                console.log('username and phone does not exist')
+                const submit = adduser.save();
+                if (submit) {
+                    res.status(201).json({ message: "User has been created Successfully default password has to be changed" })
+                    //update the count field in the database when a customer is registered
+                    customtemplate();//function for the recording of customers                 
+                }
+                else {
+                    res.send("error in sending data");
+                }
+            }
+        }).catch((error) => {
+            console.log('there is an error', error)
+        });
 
-            
-        }
-        else {
-            res.send("error in sending data");
-        }
     }
 
     else {
@@ -145,7 +153,7 @@ router.post('/user', upload.single('file'), async function (req, res) {
                         file: final_file,
                         accountnumber: accountnumber,
                         file_url: download_url,
-                        role:'customer'
+                        role: 'customer'
                     }
                 )
                 const submit = adduser.save();

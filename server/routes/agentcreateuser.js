@@ -13,7 +13,7 @@ router.use(bodyparser.urlencoded({extended:false}));
 router.use(bodyparser.json());
 
 
-router.post('/agentcreateuser',upload.single('file'), async function(req,res){
+router.post('/agentcreateuser', async function(req,res){
 
     if (!req.file) {
         console.log("No file upload");
