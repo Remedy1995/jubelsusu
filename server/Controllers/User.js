@@ -2,6 +2,7 @@ const AddUser = require('../models/createuser');
 const md5 = require('md5');
 const cloudinary = require('cloudinary').v2;
 const config = require('../config/config');
+const ErrorResponse = require('../init/Response');
 const fs = require('fs');
 const UserLogin = (req, res, next) => {
   req.session.phone = req.body.phone.trim();
