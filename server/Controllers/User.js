@@ -4,7 +4,7 @@ const cloudinary = require('cloudinary').v2;
 const config = require('../config/config');
 const ErrorResponse = require('../init/Response');
 const fs = require('fs');
-const UserLogin = (req, res, next) => {
+const UserLogin = (req, res) => {
   req.session.phone = req.body.phone.trim();
   const phone = req.session.phone;
   req.session.password = req.body.password.trim();
