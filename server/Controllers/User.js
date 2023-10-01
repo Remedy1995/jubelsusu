@@ -83,11 +83,11 @@ const UserImageUpload = (req, res) => {
     const result = await cloudinary.uploader.upload(imgsrc);
     try {
       if (hasId) {
-        DeleteImage(imgsrc);
+        //DeleteImage(imgsrc);
         return result.url;
       }
       else {
-        DeleteImage(imgsrc);
+        ///DeleteImage(imgsrc);
         return res.status(201).json(result);
 
       }
