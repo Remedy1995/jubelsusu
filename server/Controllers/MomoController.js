@@ -6,14 +6,14 @@ let payload = [];
 const PayWithMomo = async (req, res) => {
 
     try {
-        const { email, amount, phone } = req.body;
+        const { email, amount, phone,provider} = req.body;
         const params = JSON.stringify({
             "amount": amount,
             "email": email,
             "currency": "GHS",
             "mobile_money": {
                 "phone": phone,
-                "provider": "mtn"
+                "provider": provider
             }
         })
 
