@@ -7,13 +7,13 @@ const VerifyTransaction = require('./Controllers/MomoController');
 const md5 = require("md5");
 const path = require('path');
 require('dotenv').config();
+const SMS = require('./routes/PhoneSMSRoutes');
 const app = express();
 const AdminUser = require('../server/models/adminuser');
 const AddUser = require('../server/models/createuser');
 const CreateAgent = require('../server/models/createsusuagents');
 const mongoose = require('mongoose');
 const Checkdate = require('../date');
-const createroute = require('./routes/createuserroutes');
 const agentcreateuser = require('./routes/agentcreateuser');
 const createdeposit = require('./routes/PaymentRoutes');
 const agentdeposit = require('./routes/agentmakedepositroute');//for the agent deposit route
@@ -64,6 +64,7 @@ const getimage = require('../server/routes/getimage');
 const userimage = require('../server/routes/userimage');
 const adminimage = require('../server/routes/adminimage');
 const resetuserpassword = require('../server/routes/resetuserpasword');
+const userRoutes = require('./routes/UserRoutes');
 const mongodb = 'mongodb+srv://Remedy:Remedy1995@cluster0.swuc4.mongodb.net/susu';
 app.set('trust proxy', 1);
 app.use(session({
@@ -80,13 +81,12 @@ app.use(function (req, res, next) {
 });
 app.use(cookie());
 //routes for actions
-app.use('/createuser', createroute);//create a new user 
 app.use('/makedeposit', createdeposit);//make deposit
 app.use('/searchuser', searchuser);//list all users
 app.use('/makewithdrawal', makewithdrawal);//make withdrawal
 app.use('/depositorinfo', depositorinfo);//check depositor information
 app.use('/edit', edit);
-app.use('/userlogin', userlogin);
+app.use('/user',userRoutes);
 app.use('/delete', dele);//for deleting the user information
 app.use('/transaction', transaction);//for recording transactions of the customer both deposit and withdrawal
 //app.use('/upload', upload);//for uploading daily transactions 
@@ -128,6 +128,7 @@ app.use('/getimage', getimage);
 app.use('/userimage', userimage);
 app.use('/adminimage', adminimage);
 app.use('/resetuserpassword', resetuserpassword);
+app.use('/phonesms',SMS);
 app.use('/makepayment', createdeposit)
 //connection to the database 
 

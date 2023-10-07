@@ -87,5 +87,13 @@ const VerificationValidator = (req, res, next) => {
   next();
 }
 
-
-module.exports = { DepositValidator, LoginValidator, MomoValidator,OtpValidator,VerificationValidator };
+const SendSMSValidator = (req, res, next) => {
+  const { body } = req;
+  if (!body.message || !body.reciepient_phone || !body.sender_id) {
+    const error = new ErrorResponse(400, "Invalid Request", "Sorry either message,reciepient_phone or sender_id does not exist");
+    res.status(400).json(error.errorObject());
+    return false;
+  }
+next();
+}
+module.exports = { DepositValidator, LoginValidator, MomoValidator,OtpValidator,VerificationValidator,SendSMSValidator };
