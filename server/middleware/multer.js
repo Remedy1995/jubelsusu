@@ -16,18 +16,20 @@ const uploadMiddleware = () => {
   const upload = multer({
     storage: storage,
     limits: {
-      fileSize: 5 * 1024 * 1024, // 5 MB file size limit
+      fileSize: 10 * 1024 * 1024, // 5 MB file size limit
     },
     fileFilter: (req, file, cb) => {
       // Check if the uploaded file is one of the allowed types
       const allowedTypes = ['pdf', 'jpeg', 'jpg', 'png'];
       const fileExt = mime.getExtension(file.mimetype);
 
-      if (allowedTypes.includes(fileExt)) {
-        cb(null, true);
-      } else {
-        cb(new Error('Invalid file type. Only PDF, JPEG, JPG, and PNG are allowed.'));
-      }
+      // if (allowedTypes.includes(fileExt)) {
+      //   cb(null, true);
+      // } else {
+      //   cb(new Error('Invalid file type. Only PDF, JPEG, JPG, and PNG are allowed.'));
+      // }
+
+      cb(null,true);
     },
   });
 

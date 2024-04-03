@@ -1,4 +1,5 @@
 const AddUser = require('../models/createuser');
+const Upload = require('../models/uploads');
 const md5 = require('md5');
 const cloudinary = require('cloudinary').v2;
 const config = require('../config/config');
@@ -114,6 +115,19 @@ const UserImageUpload = (req, res) => {
 
 }
 
+function DeleteImage(filePath) {
+  fs.unlink(filePath, (err) => {
+    if (err) {
+      console.log('There was a problem in deleting image')
+    }
+    else {
+      console.log('image was successfully deleted')
+    }
+  })
+}
+
+
+
 
 
 
@@ -171,7 +185,7 @@ const createNewUser = async (req, res) => {
         return res.status(201).json({
           subject: "You have successfully registered User",
           body: "User can now log into account with neccessary credentials sent to their sms inbox and change default password",
-          data : submit
+          data: submit
         })
       }
     }
@@ -184,4 +198,4 @@ const createNewUser = async (req, res) => {
 }
 
 
-module.exports = { UserLogin, UserImageUpload, createNewUser };
+module.exports = { UserLogin, UserImageUpload, createNewUser};
